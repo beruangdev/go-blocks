@@ -16,5 +16,5 @@
   "[php]": {
     "breadcrumbs.showConstructors": true,
     "editor.defaultFormatter": "valeryanm.vscode-phpsab"
-  },
+  }
 }
