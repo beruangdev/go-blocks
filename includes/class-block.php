@@ -1,6 +1,6 @@
 <?php
 
-namespace Spawn;
+namespace GB;
 
 class Block {
     private string $block_name;

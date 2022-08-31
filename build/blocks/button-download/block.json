@@ -5,7 +5,6 @@
   "version": "0.0.1",
   "title": "Download Button (Go Blocks)",
   "category": "text",
-  "icon": "editor-ul",
   "attributes": {
     "blockID": {
       "type": "string",
