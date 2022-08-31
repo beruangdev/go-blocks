@@ -1,0 +1,20 @@
+{
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  //   "phpsab.executablePathCBF": "${workspaceRoot}/vendor/bin/phpcbf",
+  //   "phpsab.executablePathCS": "${workspaceRoot}/vendor/bin/phpcs",
+  "editor.linkedEditing": true,
+  "editor.detectIndentation": false,
+  "editor.formatOnSave": true,
+  "window.title": "${activeEditorLong}${separator}${rootName}",
+  // "phpsab.standard": "WordPress",
+  "phpsab.snifferEnable": true, // disable this if you don't need suggestions
+  "phpsab.snifferShowSources": true,
+  "files.autoSave": "afterDelay",
+  "phpsab.standard": "WordPress",
+  "[php]": {
+    "breadcrumbs.showConstructors": true,
+    "editor.defaultFormatter": "valeryanm.vscode-phpsab"
+  },
+}

@@ -1,0 +1,58 @@
+<?php
+/**
+ * Plugin Name: Go Blocks
+ * Plugin URI: https://wordpress.org/plugins/go-blocks
+ * Description: My first block is always Go Block
+ * Version: 0.0.1
+ * Author: Bilhakki
+ * Author URI: https://www.instagram.com/bilhakki_
+ * Text Domain: go-blocks
+ * License: GPL-3.0+
+ * Requires at least: 6.0
+ * Requires PHP: 7.0
+ * WC requires at least: 6.6
+ * WC tested up to: 6.7
+ *
+ * @package bilhakki\GoBlocks
+ */
+
+declare(strict_types=1);
+
+namespace GB;
+
+use GB\Setup;
+
+if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
+	require_once __DIR__ . '/vendor/autoload.php';
+}
+
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+/**
+ * Block Initializer.
+ */
+define( 'GB_NAME', 'go-blocks' );
+define( 'GB_VERSION', '0.0.1' );
+define( 'GB_ASSET_VERSION', '0.0.1-ub_EQ' );
+define( 'GB_PLUGIN_BASE', plugin_basename( __FILE__ ) );
+define( 'GB_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
+define( 'GB_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
+define( 'GB_PLUGIN_FILE', __FILE__ );
+define( 'GB_PREFIX', 'gb' );
+
+defined( 'ABSPATH' ) || exit;
+
+if ( function_exists( 'is_multisite' ) && is_multisite() ) {
+	add_action(
+		'plugins_loaded',
+		function () {
+			return Setup::instance();
+		},
+		90
+	);
+} else {
+	Setup::instance();
+}
