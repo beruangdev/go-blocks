@@ -1,9 +1,13 @@
-const ranstr = require("./random-string")
-const fs = require("fs")
-const path = require("path")
+const ranstr = require('./random-string')
+const fs = require('fs')
+const path = require('path')
 
-module.exports = function (pkg = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), "package.json"), "utf8"))) {
-    let str = `<?php
+module.exports = function (
+  pkg = JSON.parse(
+    fs.readFileSync(path.resolve(process.cwd(), 'package.json'), 'utf8'),
+  ),
+) {
+  let str = `<?php
 /**
  * Plugin Name: ${pkg.title}
  * Plugin URI: ${pkg.homepage}
@@ -21,7 +25,7 @@ module.exports = function (pkg = JSON.parse(fs.readFileSync(path.resolve(process
  * @package bilhakki\\GoBlocks
  */`
 
-    str += `
+  str += `
 
 declare(strict_types=1);
 
@@ -63,5 +67,5 @@ if ( function_exists( 'is_multisite' ) && is_multisite() ) {
 }
 
 `
-    return fs.writeFileSync( path.resolve(process.cwd(), "setup.php"), str, "utf8" )
+  return fs.writeFileSync(path.resolve(process.cwd(), 'setup.php'), str, 'utf8')
 }

@@ -1,15 +1,16 @@
 module.exports = {
-    purge: {
-        enabled: true,
-        content: ["./src/**/*.{ts,tsx,js,jsx,php}", "./build/**/*.{ts,tsx,js,jsx,php}"],
-        important: true,
-    },
+  purge: {
+    enabled: true,
     content: [
-        "./src/**/*.{ts,tsx,js,jsx,php}",
+      './src/**/*.{ts,tsx,js,jsx,php}',
+      './build/**/*.{ts,tsx,js,jsx,php}',
     ],
-    theme: {
-        extend: {},
-    },
-    variants: {},
-    plugins: [],
+    important: true,
+  },
+  content: ['./src/**/*.{ts,tsx,js,jsx,php}'],
+  theme: {
+    extend: {},
+  },
+  variants: {},
+  plugins: [],
 }

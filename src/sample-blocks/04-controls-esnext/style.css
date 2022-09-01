@@ -3,21 +3,21 @@
  * editor-specific styles using the same selectors will take precedence.
  */
 .wp-block-gutenberg-examples-example-04-controls-esnext {
-	color: #8b0000;
-	background: #fcc;
-	border: 2px solid #c99;
-	padding: 20px;
-	font-family: sans-serif;
+  color: #8b0000;
+  background: #fcc;
+  border: 2px solid #c99;
+  padding: 20px;
+  font-family: sans-serif;
 }
 
 .gutenberg-examples-align-left {
-	text-align: left;
+  text-align: left;
 }
 
 .gutenberg-examples-align-center {
-	text-align: center;
+  text-align: center;
 }
 
 .gutenberg-examples-align-right {
-	text-align: right;
+  text-align: right;
 }
