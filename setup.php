@@ -3,7 +3,7 @@
  * Plugin Name: Go Blocks
  * Plugin URI: https://wordpress.org/plugins/go-blocks
  * Description: My first block is always Go Block
- * Version: 0.0.1
+ * Version: 0.0.1-alpha
  * Author: Bilhakki
  * Author URI: https://www.instagram.com/bilhakki_
  * Text Domain: go-blocks
@@ -35,15 +35,13 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Block Initializer.
  */
 define( 'GB_NAME', 'go-blocks' );
-define( 'GB_VERSION', '0.0.1' );
-define( 'GB_ASSET_VERSION', '0.0.1-ub_EQ' );
+define( 'GB_VERSION', '0.0.1-alpha' );
+define( 'GB_ASSET_VERSION', '0.0.1-alpha-dq-c_' );
 define( 'GB_PLUGIN_BASE', plugin_basename( __FILE__ ) );
 define( 'GB_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'GB_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'GB_PLUGIN_FILE', __FILE__ );
 define( 'GB_PREFIX', 'gb' );
-
-defined( 'ABSPATH' ) || exit;
 
 if ( function_exists( 'is_multisite' ) && is_multisite() ) {
 	add_action(
@@ -56,3 +54,4 @@ if ( function_exists( 'is_multisite' ) && is_multisite() ) {
 } else {
 	Setup::instance();
 }
+
