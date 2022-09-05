@@ -36,7 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 define( 'GB_NAME', 'go-blocks' );
 define( 'GB_VERSION', '0.0.1-alpha' );
-define( 'GB_ASSET_VERSION', '0.0.1-alpha-dq-c_' );
+define( 'GB_ASSET_VERSION', '0.0.1-alpha-HPG23' );
 define( 'GB_PLUGIN_BASE', plugin_basename( __FILE__ ) );
 define( 'GB_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'GB_PLUGIN_URL', plugin_dir_url( __FILE__ ) );

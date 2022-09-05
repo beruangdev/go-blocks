@@ -1,4 +1,3 @@
-
 <?php
 echo 'hi';
 echo 'hello';   
@@ -71,4 +70,3 @@ class Nested_Function {
 }
 
 ?>
-

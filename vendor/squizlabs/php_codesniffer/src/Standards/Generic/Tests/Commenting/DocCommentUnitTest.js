@@ -1,4 +1,3 @@
-
 /**
  * Short description.
  *
@@ -72,7 +71,7 @@
  * @tag one
  */
 
- /**
+/**
  * Short description.
  *
  * @param
@@ -95,7 +94,7 @@
  * @g3  two
  */
 
- /**
+/**
  * Short description
  * over multiple lines.
  *
@@ -117,7 +116,7 @@
  *             multiple lines
  */
 
- /**
+/**
  * Returns true if the specified string is in the camel caps format.
  *
  * @param boolean $classFormat If true, check to see if the string is in the
@@ -132,7 +131,7 @@
  * @return boolean
  */
 
- /**
+/**
  * Verifies that a @throws tag exists for a function that throws exceptions.
  * Verifies the number of @throws tags and the number of throw tokens matches.
  * Verifies the exception type.
@@ -148,7 +147,7 @@
  * @link      http://pear.php.net/package/PHP_CodeSniffer
  */
 
- /**
+/**
  * Comment
  *
  * @one
@@ -163,7 +162,7 @@
  * @three bar
  */
 
- /**
+/**
  * @ var Comment
  */
 
@@ -213,15 +212,15 @@
 
 /**doc comment */
 
-        /**
-         * Document behaviour with missing blank lines with indented docblocks.
-         * @param
-         * @param
-         * @tag one
-         *
-         */
+/**
+ * Document behaviour with missing blank lines with indented docblocks.
+ * @param
+ * @param
+ * @tag one
+ *
+ */
 
-        /** Indented doc comment */
+/** Indented doc comment */
 
 /**
  * Verify and document sniff behaviour when the "tag value" is indented with a mix of tabs and spaces.

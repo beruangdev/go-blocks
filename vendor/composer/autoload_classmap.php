@@ -7,7 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'GB\\Block' => $baseDir . '/includes/class-block.php',
+    'GB\\Blocks' => $baseDir . '/includes/class-blocks.php',
     'GB\\Setup' => $baseDir . '/includes/class-setup.php',
-    'Spawn\\Block' => $baseDir . '/includes/class-block.php',
-    'Spawn\\Blocks' => $baseDir . '/includes/class-blocks.php',
 );

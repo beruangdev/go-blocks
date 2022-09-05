@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'bilhakki/go-blocks',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '9af4e4aa78d57e5c9d065d26b660e2339723d4f9',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'automattic/vipwpcs' => array(
             'pretty_version' => 'dev-develop',
             'version' => 'dev-develop',
-            'reference' => '796580706adaaf73a3a40e4c92a64dc9aaa0b700',
+            'reference' => 'f1c80858a680f0b42d97cb6cbbfad7b5c433f08c',
             'type' => 'phpcodesniffer-standard',
             'install_path' => __DIR__ . '/../automattic/vipwpcs',
             'aliases' => array(
@@ -22,9 +22,9 @@
             'dev_requirement' => true,
         ),
         'bilhakki/go-blocks' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '9af4e4aa78d57e5c9d065d26b660e2339723d4f9',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -60,7 +60,7 @@
         'phpcompatibility/phpcompatibility-wp' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '79966df2570451119bb6f44952044964f1c8c91b',
+            'reference' => 'dbb88b4f397fe2d52af984cae7714d7cd28d5bc3',
             'type' => 'phpcodesniffer-standard',
             'install_path' => __DIR__ . '/../phpcompatibility/phpcompatibility-wp',
             'aliases' => array(

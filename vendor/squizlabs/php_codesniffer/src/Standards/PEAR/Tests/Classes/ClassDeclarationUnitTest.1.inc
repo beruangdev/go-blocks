@@ -68,47 +68,17 @@ namespace A
     }
 }
 
-$util->setLogger(new class {});
-
-var_dump(new class(10) extends SomeClass implements SomeInterface {
-    private $num;
-
-    public function __construct($num)
-    {
-        $this->num = $num;
-    }
-
-    use SomeTrait;
-});
-
-class IncorrectClassDeclarationWithCommentAtEnd extends correctClassDeclaration /* Comment */ {
-}
-
-class CorrectClassDeclarationWithCommentAtEnd extends correctClassDeclaration
-/* Comment */
-{
-}
-
-// Don't move phpcs:ignore comments.
-class PHPCSIgnoreAnnotationAfterOpeningBrace
-{ // phpcs:ignore Standard.Cat.Sniff -- for reasons.
-}
-
-// Moving any of the other trailing phpcs: comments is ok.
-class PHPCSAnnotationAfterOpeningBrace
-{ // phpcs:disable Standard.Cat.Sniff -- for reasons.
-}
-
-if (!class_exists('ClassOpeningBraceShouldBeIndented')) {
-    abstract class ClassOpeningBraceShouldBeIndented
-{
-}
-}
-
-if (!class_exists('ClassOpeningBraceTooMuchIndentation')) {
-    final class ClassOpeningBraceTooMuchIndentation
-        {
-        }
-}
-
-enum IncorrectBracePlacement {}
+$util->setLogger(new class {}); var_dump(new class(10) extends SomeClass
+implements SomeInterface { private $num; public function __construct($num) {
+$this->num = $num; } use SomeTrait; }); class
+IncorrectClassDeclarationWithCommentAtEnd extends correctClassDeclaration /*
+Comment */ { } class CorrectClassDeclarationWithCommentAtEnd extends
+correctClassDeclaration /* Comment */ { } // Don't move phpcs:ignore comments.
+class PHPCSIgnoreAnnotationAfterOpeningBrace { // phpcs:ignore
+Standard.Cat.Sniff -- for reasons. } // Moving any of the other trailing phpcs:
+comments is ok. class PHPCSAnnotationAfterOpeningBrace { // phpcs:disable
+Standard.Cat.Sniff -- for reasons. } if
+(!class_exists('ClassOpeningBraceShouldBeIndented')) { abstract class
+ClassOpeningBraceShouldBeIndented { } } if
+(!class_exists('ClassOpeningBraceTooMuchIndentation')) { final class
+ClassOpeningBraceTooMuchIndentation { } } enum IncorrectBracePlacement {}

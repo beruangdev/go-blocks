@@ -80,96 +80,31 @@ if($value === ($value1 | $value2)){}
 if(($value1 | $value2) === $value){}
 
 // Check with objects
-if($object->myVar === $value){}
-if($value === $object->myVar){}
-
-if($object->function() === $value){}
-if($value === $object->function()){}
-
-// Check with functions
-if(myFunction() === $value){}
-if($value === myFunction()){}
-
-// check with multiple operations
-if($value === true && $value === 1 && $value === null){}
-if(($value === true && $value === 1) == ($value === null && $value === new stdClass())){}
-
-if(true === $value && 1 === $value && null === $value){}
-if((true === $value && 1 === $value) == (null === $value && new stdClass() === $value)){}
-
-// Add comments in the middle
-if(
-    //comment
-    true
-    // comment
-    ===
-    // comment
-    $value
-){}
-
-if(
-    //comment
-    $value
-    // comment
-    ===
-    // comment
-    true
-){}
-
-if(array($key => $val) === $value){}
-if(array($key => $val) == $value){}
-
-if([$key => $val] === $value){}
-if([$key => $val] == $value){}
-
-$config['checkAuthIn'] !== $event->getName();
-
-if ($var === "ab" || 'cd') {}
-if ("ab" || 'cd' === $var) {}
-if (2 > $value || 3 < $var) {}
-if ($value == true && (/* comment */ 2 > test())) {}
-if ((int) 5 > $var) {}
-if ((int) $var > (int) 5) {}
-if (true == function() { return false;}){}
-if (function() { return false;} == true){}
-
-if (is_array($val)
-    && array($foo) === array($bar)
-    && [$foo] === [$bar]
-    && array('foo', 'bar') === array($foo, $bar)
-    && ['foo', 'bar'] === [$foo, $bar]
-    && array('foo' => true, 'bar' => false) === array(getContents())
-    && ['foo' => true, 'bar' => false] === array(getContents())
-    && array(getContents()) === ['foo' => true, 'bar' => false]
-) {
-}
-
-if ($this->cfg['some_closure']() == 2) {
-}
-
-if (is_array($val)
-    && array(get_class($val[0]), $val[1]) == array('someNamespace\\className', 'method')
-) {
-}
-
-if (is_array($val)
-    && array('someNamespace\\className', 'method') == array(get_class($val[0]), $val[1])
-) {
-}
-
-if ([function() { echo 'hi'; }] === [$foo]
-    && [$foo] === [function() { echo 'hi'; }]
-    && [function() { echo 'hi'; }, $bar] === [$foo]
-    && [$foo] === [function() { echo 'hi'; }, $bar]
-) {
-}
-
-echo match (5 == $num) {
-    true => "true\n",
-    false => "false\n"
-};
-
-echo match ($text) {
-    'foo' => 10 === $y,
-    10 === $y => 'bar',
-};
+if($object->myVar === $value){} if($value === $object->myVar){}
+if($object->function() === $value){} if($value === $object->function()){} //
+Check with functions if(myFunction() === $value){} if($value === myFunction()){}
+// check with multiple operations if($value === true && $value === 1 && $value
+=== null){} if(($value === true && $value === 1) == ($value === null && $value
+=== new stdClass())){} if(true === $value && 1 === $value && null === $value){}
+if((true === $value && 1 === $value) == (null === $value && new stdClass() ===
+$value)){} // Add comments in the middle if( //comment true // comment === //
+comment $value ){} if( //comment $value // comment === // comment true ){}
+if(array($key => $val) === $value){} if(array($key => $val) == $value){}
+if([$key => $val] === $value){} if([$key => $val] == $value){}
+$config['checkAuthIn'] !== $event->getName(); if ($var === "ab" || 'cd') {} if
+("ab" || 'cd' === $var) {} if (2 > $value || 3 < $var) {} if ($value == true &&
+(/* comment */ 2 > test())) {} if ((int) 5 > $var) {} if ((int) $var > (int) 5)
+{} if (true == function() { return false;}){} if (function() { return false;} ==
+true){} if (is_array($val) && array($foo) === array($bar) && [$foo] === [$bar]
+&& array('foo', 'bar') === array($foo, $bar) && ['foo', 'bar'] === [$foo, $bar]
+&& array('foo' => true, 'bar' => false) === array(getContents()) && ['foo' =>
+true, 'bar' => false] === array(getContents()) && array(getContents()) ===
+['foo' => true, 'bar' => false] ) { } if ($this->cfg['some_closure']() == 2) { }
+if (is_array($val) && array(get_class($val[0]), $val[1]) ==
+array('someNamespace\\className', 'method') ) { } if (is_array($val) &&
+array('someNamespace\\className', 'method') == array(get_class($val[0]),
+$val[1]) ) { } if ([function() { echo 'hi'; }] === [$foo] && [$foo] ===
+[function() { echo 'hi'; }] && [function() { echo 'hi'; }, $bar] === [$foo] &&
+[$foo] === [function() { echo 'hi'; }, $bar] ) { } echo match (5 == $num) { true
+=> "true\n", false => "false\n" }; echo match ($text) { 'foo' => 10 === $y, 10
+=== $y => 'bar', };

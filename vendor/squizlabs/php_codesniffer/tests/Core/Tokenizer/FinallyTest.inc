@@ -35,6 +35,4 @@ class FinallyAsMethod {
         // Do something.
 
         /* testFinallyUsedAsPropertyName */
-        $this->finally = 'foo';
-    }
-}
+        $this->finally = 'foo'; } }

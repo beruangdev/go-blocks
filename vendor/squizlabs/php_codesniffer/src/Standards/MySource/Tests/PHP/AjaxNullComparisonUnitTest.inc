@@ -128,55 +128,20 @@ public static function addIssue(
         DAL::commit();
     } catch (Exception $e) {
         DAL::rollBack();
-        throw new ChannelException($e->getMessage());
-    }//end try
-
-    if ($something === NULL) {
-        if ($bar !== NULL) {
-        }
-    }
-
-    return $issueid;
-
-}//end addIssue()
-
-/**
- * Adds a new issue.
- *
- * Returns the new issue id.
- *
- * @param string  $title             Title of the new issue.
- * @param string  $description       The description of the issue.
- * @param string  $reporter          Asset id of the reporter.
- * @param integer $projectid         Id of the project that the issue belongs to.
- * @param array   $tags              Array of tags.
- * @param string  $status            The status of the issue.
- * @param string  $assignedTo        The asset id of the user that the issue is
- *                                   assigned to.
- * @param string  $reportedDate      If set then this date will be used instead of the
- *                                   current date and time.
- * @param integer $reportedMilestone Reported milestone.
- *
- * @return integer
- * @throws ChannelException If there is an error.
- *
- */
-public static function addIssue(
-    $title,
-    $description,
-    $reporter=NULL,
-    $projectid=NULL,
-    array $tags=array(),
-    $status=NULL,
-    $assignedTo=NULL,
-    $reportedDate=NULL,
-    $reportedMilestone=NULL
-) {
-    // Get current projectid if not specified.
-    if ($projectid === NULL) {
-        Channels::includeSystem('Project');
-        $projectid = Project::getCurrentProjectId();
-        Channels::modifyBasket('project', $projectid);
-    }
-
+        throw new ChannelException($e->getMessage()); }//end try if ($something
+=== NULL) { if ($bar !== NULL) { } } return $issueid; }//end addIssue() /** *
+Adds a new issue. * * Returns the new issue id. * * @param string $title Title
+of the new issue. * @param string $description The description of the issue. *
+@param string $reporter Asset id of the reporter. * @param integer $projectid Id
+of the project that the issue belongs to. * @param array $tags Array of tags. *
+@param string $status The status of the issue. * @param string $assignedTo The
+asset id of the user that the issue is * assigned to. * @param string
+$reportedDate If set then this date will be used instead of the * current date
+and time. * @param integer $reportedMilestone Reported milestone. * * @return
+integer * @throws ChannelException If there is an error. * */ public static
+function addIssue( $title, $description, $reporter=NULL, $projectid=NULL, array
+$tags=array(), $status=NULL, $assignedTo=NULL, $reportedDate=NULL,
+$reportedMilestone=NULL ) { // Get current projectid if not specified. if
+($projectid === NULL) { Channels::includeSystem('Project'); $projectid =
+Project::getCurrentProjectId(); Channels::modifyBasket('project', $projectid); }
 }//end addIssue()

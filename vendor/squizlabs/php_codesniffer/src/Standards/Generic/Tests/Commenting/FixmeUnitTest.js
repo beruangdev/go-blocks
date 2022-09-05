@@ -1,14 +1,13 @@
-
 /**
  * FIXME: Write this comment
  * FIXME
  */
 
 // FIXME: remove this.
-alert('test');
+alert('test')
 
 // FIXME remove this.
-alert('test');
+alert('test')
 
 // fixme - remove this.
 

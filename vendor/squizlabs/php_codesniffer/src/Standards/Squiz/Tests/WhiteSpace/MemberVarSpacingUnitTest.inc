@@ -260,115 +260,24 @@ class MyOtherClass
 
     private
         $varO = true,
-        $varP = array( 'a' => 'a', 'b' => 'b' ),
-        $varQ = 'string',
-        $varR = 123;
-}
-
-// Make sure the determination of whether a property is the first property or not is done correctly.
-class ClassUsingSimpleTraits
-{
-    use HelloWorld;
-
-
-    /* comment */
-    public $firstVar = array( 'a', 'b' );
-    protected $secondVar = true;
-}
-
-class ClassUsingComplexTraits
-{
-    use A, B {
-        B::smallTalk insteadof A;
-        A::bigTalk insteadof B;
-    }
-
-
-
-    public $firstVar = array( 'a', 'b' );
-
-
-    /* comment */
-    protected $secondVar = true;
-}
-
-class Foo
-{
-
-
-    private function foo()
-    {
-    }
-
-
-    /* no error here because after function */
-    private $bar = false;
-}
-
-class CommentedOutCodeAtStartOfClass {
-
-    /**
-     * Description.
-     *
-     * @var bool
-     */
-    //public $commented_out_property = true;
-
-    /**
-     * Description.
-     *
-     * @var bool
-     */
-    public $property = true;
-}
-
-class CommentedOutCodeAtStartOfClassNoBlankLine {
-
-    // phpcs:disable Stnd.Cat.Sniff -- For reasons.
-    /**
-     * Description.
-     *
-     * @var bool
-     */
-    public $property = true;
-}
-
-class HasAttributes
-{
-    /**
-     * Short description of the member variable.
-     *
-     * @var array
-     */
-
-    #[ORM\Id]#[ORM\Column("integer")]
-
-    private $id;
-
-
-    /**
-     * Short description of the member variable.
-     *
-     * @var array
-     */
-    #[ORM\GeneratedValue]
-
-    #[ORM\Column(ORM\Column::T_INTEGER)]
-    protected $height;
-
-    #[SingleAttribute]
-    protected $propertySingle;
-
-    #[FirstAttribute]
-    #[SecondAttribute]
-    protected $propertyDouble;
-    #[ThirdAttribute]
-    protected $propertyWithoutSpacing;
-}
-
-enum SomeEnum
-{
-    // Enum cannot have properties
-
-    case ONE = 'one';
-}
+        $varP = array( 'a' =>
+'a', 'b' => 'b' ), $varQ = 'string', $varR = 123; } // Make sure the
+determination of whether a property is the first property or not is done
+correctly. class ClassUsingSimpleTraits { use HelloWorld; /* comment */ public
+$firstVar = array( 'a', 'b' ); protected $secondVar = true; } class
+ClassUsingComplexTraits { use A, B { B::smallTalk insteadof A; A::bigTalk
+insteadof B; } public $firstVar = array( 'a', 'b' ); /* comment */ protected
+$secondVar = true; } class Foo { private function foo() { } /* no error here
+because after function */ private $bar = false; } class
+CommentedOutCodeAtStartOfClass { /** * Description. * * @var bool */ //public
+$commented_out_property = true; /** * Description. * * @var bool */ public
+$property = true; } class CommentedOutCodeAtStartOfClassNoBlankLine { //
+phpcs:disable Stnd.Cat.Sniff -- For reasons. /** * Description. * * @var bool */
+public $property = true; } class HasAttributes { /** * Short description of the
+member variable. * * @var array */ #[ORM\Id]#[ORM\Column("integer")] private
+$id; /** * Short description of the member variable. * * @var array */
+#[ORM\GeneratedValue] #[ORM\Column(ORM\Column::T_INTEGER)] protected $height;
+#[SingleAttribute] protected $propertySingle; #[FirstAttribute]
+#[SecondAttribute] protected $propertyDouble; #[ThirdAttribute] protected
+$propertyWithoutSpacing; } enum SomeEnum { // Enum cannot have properties case
+ONE = 'one'; }

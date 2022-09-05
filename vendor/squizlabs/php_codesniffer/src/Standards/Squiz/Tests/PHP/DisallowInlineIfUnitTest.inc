@@ -13,6 +13,5 @@ class Example {
     public ?int $scalarType;
 }
 
-$a = fn(?\DateTime $x) : ?\DateTime => $x;
-
-$b = fn ($b) => $b ? true : false;
+$a = fn(?\DateTime $x) : ?\DateTime =>
+$x; $b = fn ($b) => $b ? true : false;

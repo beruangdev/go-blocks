@@ -48,51 +48,15 @@ if ($variable === null) { }
 if ($variable === Null) { }
 
 $x = new stdClass();
-$x->null = 7;
-
-use Zend\Log\Writer\Null as NullWriter;
-new \Zend\Log\Writer\Null();
-
-namespace False;
-
-class True extends Null implements False {}
-
-use True\Something;
-use Something\True;
-class MyClass
-{
-    public function myFunction()
-    {
-        $var = array('foo' => new True());
-    }
-}
-
-$x = $f?false:TRUE;
-$x = $f? false:TRUE;
-
-class MyClass
-{
-    // Spice things up a little.
-    const true = FALSE;
-}
-
-var_dump(MyClass::true);
-
-function true() {}
-
-// Issue #3332 - ignore type declarations, but not default values.
-class TypedThings {
-	const MYCONST = false;
-
-	public int|false $int = false;
-	public Type|null $int = new MyObj(null);
-
-	private function typed(int|false $param = null, Type|null $obj = new MyObj(false)) : string|false|null
-	{
-		if (true === false) {
-			return null;
-        }
-    }
-}
-
-$cl = function (int|false $param = null, Type|null $obj = new MyObj(false)) : string|false|null {};
+$x->null = 7; use Zend\Log\Writer\Null as NullWriter; new
+\Zend\Log\Writer\Null(); namespace False; class True extends Null implements
+False {} use True\Something; use Something\True; class MyClass { public function
+myFunction() { $var = array('foo' => new True()); } } $x = $f?false:TRUE; $x =
+$f? false:TRUE; class MyClass { // Spice things up a little. const true = FALSE;
+} var_dump(MyClass::true); function true() {} // Issue #3332 - ignore type
+declarations, but not default values. class TypedThings { const MYCONST = false;
+public int|false $int = false; public Type|null $int = new MyObj(null); private
+function typed(int|false $param = null, Type|null $obj = new MyObj(false)) :
+string|false|null { if (true === false) { return null; } } } $cl = function
+(int|false $param = null, Type|null $obj = new MyObj(false)) : string|false|null
+{};

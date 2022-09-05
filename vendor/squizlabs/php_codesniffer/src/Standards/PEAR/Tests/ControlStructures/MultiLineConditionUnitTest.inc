@@ -1,5 +1,5 @@
 <?php if (isset($param)) { ?>
-   <h3>some text</h3>
+<h3>some text</h3>
 <?php }
 
 if (($condition1
@@ -141,111 +141,36 @@ if (true) :
     $foo = true;
 endif;
 
-if ($IPP->errorCode() == 401 || // comment
-    $IPP->errorCode() == 3200)  /* long comment
-                                   here
-                                 */
-{
-    return false;
-}
-
-if ($IPP->errorCode() == 401 || // comment
-    $IPP->errorCode() == 3200)  // long comment here
-{
-    return false;
-}
-
-if ($IPP->errorCode() == 401
-    // Comment explaining the next condition here.
-    || $IPP->errorCode() == 3200
-) {
-    return false;
-}
-
-function bar() {
-    if ($a
-        && $b
-) {
-        return false;
-    }
-}
-
-if ($a
-    && foo(
-        'a',
-        'b'
-    )) {
-    return false;
-}
-
-?>
+if ($IPP->errorCode() == 401 || // comment $IPP->errorCode() == 3200) /* long
+comment here */ { return false; } if ($IPP->errorCode() == 401 || // comment
+$IPP->errorCode() == 3200) // long comment here { return false; } if
+($IPP->errorCode() == 401 // Comment explaining the next condition here. ||
+$IPP->errorCode() == 3200 ) { return false; } function bar() { if ($a && $b ) {
+return false; } } if ($a && foo( 'a', 'b' )) { return false; } ?>
 <?php foreach ($blah as $boo) : ?>
-    <?php if ($foo): ?>
-        <?php
+<?php if ($foo): ?>
+<?php
             if ($bar) {
             } else {
             }
         ?>
-    <?php endif; ?>
+<?php endif; ?>
 <?php endforeach; ?>
 <?php
 
-if ($IPP->errorCode() == 401 || // phpcs:ignore Standard.Category.Sniff -- for reasons.
-    $IPP->errorCode() == 3200)  /*
-                                   phpcs:ignore Standard.Category.Sniff -- for reasons.
-                                 */
-{
-    return false;
-}
-
-if ($IPP->errorCode() == 401 || // phpcs:disable Standard.Category.Sniff -- for reasons.
-    $IPP->errorCode() == 3200)  // phpcs:enable
-{
-    return false;
-}
-
-if ($IPP->errorCode() == 401
-    // phpcs:ignore Standard.Category.Sniff -- for reasons.
-    || $IPP->errorCode() == 3200
-) {
-    return false;
-}
-
-    if ($IPP->errorCode() == 401 ||
-    /*
-     * phpcs:disable Standard.Category.Sniff -- for reasons.
-     */
-    $IPP->errorCode() == 3200
-    ) {
-        return false;
-    }
-
-if ($IPP->errorCode() == 401
-    || $IPP->errorCode() == 3200
-    // phpcs:ignore Standard.Category.Sniff -- for reasons.
-) {
-    return false;
-}
-
-if ($IPP->errorCode() == 401
-    || $IPP->errorCode()
-        === 'someverylongexpectedoutput'
-) {
-    return false;
-}
-
-if ($IPP->errorCode() == 401
-    || $IPP->errorCode()
-        // A comment.
-        === 'someverylongexpectedoutput'
-) {
-    return false;
-}
-
-if ($IPP->errorCode() == 401
-    || $IPP->errorCode()
-        // phpcs:ignore Standard.Category.Sniff -- for reasons.
-        === 'someverylongexpectedoutput'
-) {
-    return false;
-}
+if ($IPP->errorCode() == 401 || // phpcs:ignore Standard.Category.Sniff -- for
+reasons. $IPP->errorCode() == 3200) /* phpcs:ignore Standard.Category.Sniff --
+for reasons. */ { return false; } if ($IPP->errorCode() == 401 || //
+phpcs:disable Standard.Category.Sniff -- for reasons. $IPP->errorCode() == 3200)
+// phpcs:enable { return false; } if ($IPP->errorCode() == 401 // phpcs:ignore
+Standard.Category.Sniff -- for reasons. || $IPP->errorCode() == 3200 ) { return
+false; } if ($IPP->errorCode() == 401 || /* * phpcs:disable
+Standard.Category.Sniff -- for reasons. */ $IPP->errorCode() == 3200 ) { return
+false; } if ($IPP->errorCode() == 401 || $IPP->errorCode() == 3200 //
+phpcs:ignore Standard.Category.Sniff -- for reasons. ) { return false; } if
+($IPP->errorCode() == 401 || $IPP->errorCode() === 'someverylongexpectedoutput'
+) { return false; } if ($IPP->errorCode() == 401 || $IPP->errorCode() // A
+comment. === 'someverylongexpectedoutput' ) { return false; } if
+($IPP->errorCode() == 401 || $IPP->errorCode() // phpcs:ignore
+Standard.Category.Sniff -- for reasons. === 'someverylongexpectedoutput' ) {
+return false; }

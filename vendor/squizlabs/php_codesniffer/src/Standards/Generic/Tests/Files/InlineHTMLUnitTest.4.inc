@@ -1,3 +1,3 @@
 <html>
-<?php echo $allTheThings; ?>
+  <?php echo $allTheThings; ?>
 </html>

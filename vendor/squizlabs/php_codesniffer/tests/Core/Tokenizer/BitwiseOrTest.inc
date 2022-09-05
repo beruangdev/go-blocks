@@ -103,32 +103,13 @@ $closureWithReturnType = function ($string = NONSENSE | FAKE)/* testTypeUnionClo
 /* testTypeUnionArrowParam */
 $arrowWithParamType = fn (object|array $param, /* testBitwiseOrArrowParamDefault */ ?int $int = CONSTA | CONSTB )
     /* testBitwiseOrArrowExpression */
-    => $param | $int;
-
-/* testTypeUnionArrowReturnType */
-$arrowWithReturnType = fn ($param) : int|null => $param * 10;
-
-/* testBitwiseOrInArrayKey */
-$array = array(
-    A | B => /* testBitwiseOrInArrayValue */ B | C
-);
-
-/* testBitwiseOrInShortArrayKey */
-$array = [
-    A | B => /* testBitwiseOrInShortArrayValue */ B | C
-];
-
-/* testBitwiseOrTryCatch */
-try {
-} catch ( ExceptionA | ExceptionB $e ) {
-}
-
-/* testBitwiseOrNonArrowFnFunctionCall */
-$obj->fn($something | $else);
-
-/* testTypeUnionNonArrowFunctionDeclaration */
-function &fn(int|false $something) {}
-
-/* testLiveCoding */
-// Intentional parse error. This has to be the last test in the file.
-return function( type|
+    =>
+$param | $int; /* testTypeUnionArrowReturnType */ $arrowWithReturnType = fn
+($param) : int|null => $param * 10; /* testBitwiseOrInArrayKey */ $array =
+array( A | B => /* testBitwiseOrInArrayValue */ B | C ); /*
+testBitwiseOrInShortArrayKey */ $array = [ A | B => /*
+testBitwiseOrInShortArrayValue */ B | C ]; /* testBitwiseOrTryCatch */ try { }
+catch ( ExceptionA | ExceptionB $e ) { } /* testBitwiseOrNonArrowFnFunctionCall
+*/ $obj->fn($something | $else); /* testTypeUnionNonArrowFunctionDeclaration */
+function &fn(int|false $something) {} /* testLiveCoding */ // Intentional parse
+error. This has to be the last test in the file. return function( type|

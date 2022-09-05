@@ -1,4 +1,3 @@
-
 <?= 'hi'; ?>
 
 <div>...more HTML...</div>

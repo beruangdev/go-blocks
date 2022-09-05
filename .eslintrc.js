@@ -1,40 +1,37 @@
 const path = require('path')
-
 module.exports = {
-  env: {
-    browser: true,
-    node: true,
-    es2020: true,
+  globals: {
+    window: true,
+    module: true,
   },
   parserOptions: {
-    ecmaVersion: 11,
+    sourceType: 'module',
   },
-  plugins: ['import'],
-  ignorePatterns: ['_extras', '_release', 'dist', 'node_modules'],
-
-  extends: [
-    'prettier',
-    'eslint:recommended',
-    'plugin:prettier/recommended',
-    'plugin:@wordpress/eslint-plugin/recommended',
-    'plugin:jest/recommended',
-    'plugin:react/recommended',
-    'plugin:prettier/recommended',
-  ],
   rules: {
-    'prettier/prettier': 'error',
-    'no-console': 'off',
-    'no-unused-vars': 'error',
-    camelcase: ['warn', { allow: ['element_id'] }],
-    'no-use-before-define': 'off',
-    'react/jsx-filename-extension': [1, { extensions: ['.tsx', '.jsx'] }],
-    'import/no-extraneous-dependencies': 'off',
-    'import/prefer-default-export': 'off',
-    'react/function-component-definition': [
-      2,
-      { namedComponents: 'arrow-function' },
-    ],
+    'react/react-in-jsx-scope': 'off',
+    camelcase: 'off',
+    'no-undef': 'off',
+    'no-unused-vars': 'off',
+    'react/prop-types': 'off',
+
+    // "no-use-before-define": "off",
+    // "import/no-extraneous-dependencies": "off",
+    // "import/prefer-default-export": "off",
   },
+  env: {
+    browser: true,
+    es2021: true,
+    jest: true,
+    amd: true,
+    node: true,
+  },
+  extends: [
+    'wordpress',
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:jsx-a11y/recommended',
+    'plugin:jest/recommended',
+  ],
   settings: {
     'import/resolver': {
       webpack: {
@@ -54,15 +51,20 @@ module.exports = {
             '@wordpress/plugins': 'wp.plugins',
             '@wordpress/rich-text': 'wp.richText',
           },
-          resolve: {
-            alias: {
-              '@types': path.resolve(__dirname, 'types'),
-              '@': path.resolve(__dirname, 'src'),
-            },
-            extensions: ['.ts', '.tsx', '.js', '.jsx'],
-          },
+          // resolve: {
+          //     alias: {
+          //         "@types": path.resolve(__dirname, "types"),
+          //         "@": path.resolve(__dirname, "src"),
+          //     },
+          //     extensions: [".ts", ".tsx"],
+          // },
         },
       },
+      // alias: {
+      //     map: [
+      //         ['@types', './types']
+      //     ]
+      // }
     },
     react: {
       version: '18.2.0',

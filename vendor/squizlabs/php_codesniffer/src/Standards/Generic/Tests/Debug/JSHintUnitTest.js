@@ -1,3 +1,3 @@
 /* jshint undef: true, unused: true */
 
-var foo = bar;
+var foo = bar

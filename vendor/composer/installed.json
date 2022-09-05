@@ -7,12 +7,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/VIP-Coding-Standards.git",
-                "reference": "796580706adaaf73a3a40e4c92a64dc9aaa0b700"
+                "reference": "f1c80858a680f0b42d97cb6cbbfad7b5c433f08c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/VIP-Coding-Standards/zipball/796580706adaaf73a3a40e4c92a64dc9aaa0b700",
-                "reference": "796580706adaaf73a3a40e4c92a64dc9aaa0b700",
+                "url": "https://api.github.com/repos/Automattic/VIP-Coding-Standards/zipball/f1c80858a680f0b42d97cb6cbbfad7b5c433f08c",
+                "reference": "f1c80858a680f0b42d97cb6cbbfad7b5c433f08c",
                 "shasum": ""
             },
             "require": {
@@ -29,7 +29,7 @@
                 "phpcsstandards/phpcsdevtools": "^1.0",
                 "phpunit/phpunit": "^4 || ^5 || ^6 || ^7"
             },
-            "time": "2022-04-24T01:56:18+00:00",
+            "time": "2022-08-29T16:21:41+00:00",
             "default-branch": true,
             "type": "phpcodesniffer-standard",
             "installation-source": "dist",
@@ -47,6 +47,7 @@
             "keywords": [
                 "phpcs",
                 "standards",
+                "static analysis",
                 "wordpress"
             ],
             "support": {
@@ -265,12 +266,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPCompatibility/PHPCompatibilityWP.git",
-                "reference": "79966df2570451119bb6f44952044964f1c8c91b"
+                "reference": "dbb88b4f397fe2d52af984cae7714d7cd28d5bc3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPCompatibility/PHPCompatibilityWP/zipball/79966df2570451119bb6f44952044964f1c8c91b",
-                "reference": "79966df2570451119bb6f44952044964f1c8c91b",
+                "url": "https://api.github.com/repos/PHPCompatibility/PHPCompatibilityWP/zipball/dbb88b4f397fe2d52af984cae7714d7cd28d5bc3",
+                "reference": "dbb88b4f397fe2d52af984cae7714d7cd28d5bc3",
                 "shasum": ""
             },
             "require": {
@@ -284,7 +285,7 @@
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.7 || This Composer plugin will sort out the PHP_CodeSniffer 'installed_paths' automatically.",
                 "roave/security-advisories": "dev-master || Helps prevent installing dependencies with known security issues."
             },
-            "time": "2022-03-19T08:19:46+00:00",
+            "time": "2022-09-04T21:13:10+00:00",
             "default-branch": true,
             "type": "phpcodesniffer-standard",
             "installation-source": "dist",
@@ -308,6 +309,7 @@
                 "compatibility",
                 "phpcs",
                 "standards",
+                "static analysis",
                 "wordpress"
             ],
             "support": {

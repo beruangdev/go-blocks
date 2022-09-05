@@ -40,17 +40,7 @@ switch ($x) {
         break;
 
     /* testNotGotoDeclarationClassProperty */
-    case $obj->property:
-        // Do something.
-        break;
-}
-
-switch (true) {
-    /* testNotGotoDeclarationGlobalConstantInTernary */
-    case $x === ($cond) ? CONST_A : CONST_B:
-        // Do something.
-        break;
-}
-
-/* testNotGotoDeclarationEnumWithType */
-enum Suit: string implements Colorful, CardGame {}
+    case $obj->property: // Do something. break; } switch (true) { /*
+testNotGotoDeclarationGlobalConstantInTernary */ case $x === ($cond) ? CONST_A :
+CONST_B: // Do something. break; } /* testNotGotoDeclarationEnumWithType */ enum
+Suit: string implements Colorful, CardGame {}

@@ -21,19 +21,24 @@ function_call();
 <input name="<?php ; something_else(); ?>" />
 <input name="<?php something_else(); ; ?>" />
 
-/*
- * Test empty statement: no code between PHP open and close tag.
- */
-<input name="<?php something_else() ?>" /> <!-- OK. -->
-<input name="<?php something_else(); ?>" /> <!-- OK. -->
-<input name="<?php /* comment */ ?>" /> <!-- OK. -->
+/* * Test empty statement: no code between PHP open and close tag. */
+<input name="<?php something_else() ?>" />
+<!-- OK. -->
+<input name="<?php something_else(); ?>" />
+<!-- OK. -->
+<input name="<?php /* comment */ ?>" />
+<!-- OK. -->
 
-<input name="<?php ?>" /> <!-- Bad. -->
+<input name="<?php ?>" />
+<!-- Bad. -->
 
-<input name="<?php
+<input
+  name="<?php
 
 
-?>" /> <!-- Bad. -->
+?>"
+/>
+<!-- Bad. -->
 
 <!--
 /*
@@ -42,12 +47,16 @@ function_call();
 -->
 <?php ; ?>
 
-<input name="<?php ; ?>" /> <!-- Bad. -->
+<input name="<?php ; ?>" />
+<!-- Bad. -->
 
 <!-- Tests with short open echo tag. -->
-<input name="<?= 'some text' ?>" /> <!-- OK. -->
-<input name="<?= ?>" /> <!-- Bad. -->
-<input name="<?= ; ?>" /> <!-- Bad. -->
+<input name="<?= 'some text' ?>" />
+<!-- OK. -->
+<input name="<?= ?>" />
+<!-- Bad. -->
+<input name="<?= ; ?>" />
+<!-- Bad. -->
 
 <?php
 // Guard against false positives for two consecutive semi-colons in a for statement.
@@ -82,5 +91,5 @@ if ($foo) {
 
 // Do not remove semicolon after match
 $c = match ($a) {
-    1 => true,
-};
+    1 =>
+true, };

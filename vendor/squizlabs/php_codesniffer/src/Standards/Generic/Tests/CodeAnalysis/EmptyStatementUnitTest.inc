@@ -55,20 +55,7 @@ while ($foo) {
     try {
         
     } catch (Exception $e) {
-        echo $e->getTraceAsString();
-    }
-}
-
-try {
-    throw Exception('Error...');
-} catch (Exception $e) {}
-
-try {
-    throw Exception('Error...');
-} catch (Exception $e) {
-    // TODO: Handle this exception later :-)
-}
-
-if (true) {} elseif (false) {}
-
+        echo $e->getTraceAsString(); } } try { throw Exception('Error...'); }
+catch (Exception $e) {} try { throw Exception('Error...'); } catch (Exception
+$e) { // TODO: Handle this exception later :-) } if (true) {} elseif (false) {}
 match($foo) {};

@@ -193,35 +193,20 @@ require_once 'file.php';
 goto label;
 
 $match = /* testMatchIsKeyword */ match ($test) {
-    1 => 'a',
-    2 => 'b',
-    /* testMatchDefaultIsKeyword */ default => 'default',
-};
-
-$closure = /* testFnIsKeyword */ fn () => 'string';
-
-function () {
-    /* testYieldIsKeyword */ yield $f;
-    /* testYieldFromIsKeyword */ yield from someFunction();
-};
-
-/* testDeclareIsKeyword */ declare(ticks=1):
-/* testEndDeclareIsKeyword */ enddeclare;
-
-if (true /* testAndIsKeyword */ and false /* testOrIsKeyword */ or null /* testXorIsKeyword */ xor 0) {
-
-}
-
-$anonymousClass = new /* testAnonymousClassIsKeyword */ class {};
-$anonymousClass2 = new class /* testExtendsInAnonymousClassIsKeyword */ extends SomeParent {};
-$anonymousClass3 = new class /* testImplementsInAnonymousClassIsKeyword */ implements SomeInterface {};
-
-$instantiated1 = new /* testClassInstantiationParentIsKeyword */ parent();
-$instantiated2 = new /* testClassInstantiationSelfIsKeyword */ SELF;
-$instantiated3 = new /* testClassInstantiationStaticIsKeyword */ static($param);
-
-class Foo extends /* testNamespaceInNameIsKeyword */ namespace\Exception
+    1 =>
+'a', 2 => 'b', /* testMatchDefaultIsKeyword */ default => 'default', }; $closure
+= /* testFnIsKeyword */ fn () => 'string'; function () { /* testYieldIsKeyword
+*/ yield $f; /* testYieldFromIsKeyword */ yield from someFunction(); }; /*
+testDeclareIsKeyword */ declare(ticks=1): /* testEndDeclareIsKeyword */
+enddeclare; if (true /* testAndIsKeyword */ and false /* testOrIsKeyword */ or
+null /* testXorIsKeyword */ xor 0) { } $anonymousClass = new /*
+testAnonymousClassIsKeyword */ class {}; $anonymousClass2 = new class /*
+testExtendsInAnonymousClassIsKeyword */ extends SomeParent {}; $anonymousClass3
+= new class /* testImplementsInAnonymousClassIsKeyword */ implements
+SomeInterface {}; $instantiated1 = new /* testClassInstantiationParentIsKeyword
+*/ parent(); $instantiated2 = new /* testClassInstantiationSelfIsKeyword */
+SELF; $instantiated3 = new /* testClassInstantiationStaticIsKeyword */
+static($param); class Foo extends /* testNamespaceInNameIsKeyword */
+namespace\Exception {} function /* testKeywordAfterFunctionShouldBeString */
+eval() {} function /* testKeywordAfterFunctionByRefShouldBeString */ &switch()
 {}
-
-function /* testKeywordAfterFunctionShouldBeString */ eval() {}
-function /* testKeywordAfterFunctionByRefShouldBeString */ &switch() {}

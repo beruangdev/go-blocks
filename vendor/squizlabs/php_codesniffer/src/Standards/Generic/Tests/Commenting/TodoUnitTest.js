@@ -1,14 +1,13 @@
-
 /**
  * TODO: Write this comment
  * TODO
  */
 
 // TODO: remove this.
-alert('test');
+alert('test')
 
 // TODO remove this.
-alert('test');
+alert('test')
 
 // todo - remove this.
 

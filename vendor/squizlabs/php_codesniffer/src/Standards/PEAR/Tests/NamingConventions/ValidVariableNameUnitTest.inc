@@ -52,50 +52,31 @@ class MyClass {
     function myFunction($cc, $cv) {
         $req = "delete from blah
                 where not (POP_{$cc}_A =
-'{$this->def["POP_{$cc}_A"]}'
-                         and POP_{$cc}_B =
-'{$this->def["POP_{$cc}_B"]}')";
-    }
-}
-
-class mpgResponse{
-   var $term_id;
-   var $currentTag;
-   function characterHandler($parser,$data){
-       switch($this->currentTag)
-       {
-           case "term_id": {
-               $this->term_id=$data;
-               break;
-           }
-       }
-   }//end characterHandler
-}//end class mpgResponse
-
-class foo
-{
-    const bar = <<<BAZ
-qux
-BAZ;
-}
-
-class foo
-{
-    var $c = <<<C
-ccc
-C;
-}
-
-class a
-{
-    protected
-        $_sheet,
-        $_FieldParser,
-        $_key;
-}
-
-$util->setLogger(
-    new class {
-        private $varName  = 'hello';
-        private $_varName = 'hello';
-});
+'{$this->def["POP_{$cc}_A"]}' and POP_{$cc}_B = '{$this->def["POP_{$cc}_B"]}')";
+} } class mpgResponse{ var $term_id; var $currentTag; function
+characterHandler($parser,$data){ switch($this->currentTag) { case "term_id": {
+$this->term_id=$data; break; } } }//end characterHandler }//end class
+mpgResponse class foo { const bar = <<<BAZ
+  qux
+  BAZ;
+  }
+  class
+  foo
+  {
+  var
+  $c="<<<C"
+  ccc
+  C;
+  }
+  class
+  a
+  {
+  protected
+  $_sheet,
+  $_FieldParser,
+  $_key;
+  }
+  $util-
+  >setLogger( new class { private $varName = 'hello'; private $_varName =
+  'hello'; });
+</BAZ>

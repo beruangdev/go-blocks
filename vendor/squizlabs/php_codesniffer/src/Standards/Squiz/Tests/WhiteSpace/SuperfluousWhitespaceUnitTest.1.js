@@ -1,56 +1,39 @@
+alert('hi')
+alert('hello')
 
-alert('hi');
-alert('hello');   
-    
-if (something) {  
-    
+if (something) {
 }
 
+function myFunction() {
+  alert('code here')
 
-function myFunction()
-{
-    alert('code here');
+  alert('code here')
 
-    alert('code here');
+  // Hello.
 
-
-    // Hello.
-
-    /*
+  /*
         HI
     */
-
-
 }
 
-function myFunction2()
-{
-    alert('code here');
+function myFunction2() {
+  alert('code here')
 
-
-    alert('code here');
-
+  alert('code here')
 }
 
-MyFunction = function()
-{
-    alert('code here');
+MyFunction = function () {
+  alert('code here')
 
-
-    alert('code here');
-
-};
+  alert('code here')
+}
 
 // phpcs:set Squiz.WhiteSpace.SuperfluousWhitespace ignoreBlankLines true
 
-function myFunction2()
-{
-    alert('code here');
-    
-    alert('code here');
-    
+function myFunction2() {
+  alert('code here')
+
+  alert('code here')
 }
 
 // phpcs:set Squiz.WhiteSpace.SuperfluousWhitespace ignoreBlankLines false
-
-

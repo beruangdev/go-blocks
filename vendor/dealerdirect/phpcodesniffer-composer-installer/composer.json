@@ -3,10 +3,22 @@
   "description": "PHP_CodeSniffer Standards Composer Installer Plugin",
   "type": "composer-plugin",
   "keywords": [
-    "composer", "installer", "plugin",
-    "phpcs", "phpcbf", "codesniffer", "phpcodesniffer", "php_codesniffer",
-    "standard", "standards", "style guide", "stylecheck",
-    "qa", "quality", "code quality", "tests"
+    "composer",
+    "installer",
+    "plugin",
+    "phpcs",
+    "phpcbf",
+    "codesniffer",
+    "phpcodesniffer",
+    "php_codesniffer",
+    "standard",
+    "standards",
+    "style guide",
+    "stylecheck",
+    "qa",
+    "quality",
+    "code quality",
+    "tests"
   ],
   "homepage": "http://www.dealerdirect.com",
   "license": "MIT",
@@ -18,8 +30,8 @@
       "role": "Developer / IT Manager"
     },
     {
-      "name" : "Contributors",
-      "homepage" : "https://github.com/Dealerdirect/phpcodesniffer-composer-installer/graphs/contributors"
+      "name": "Contributors",
+      "homepage": "https://github.com/Dealerdirect/phpcodesniffer-composer-installer/graphs/contributors"
     }
   ],
   "support": {

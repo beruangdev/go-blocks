@@ -39,9 +39,9 @@ class ComposerStaticInit796ee85e84738426fe8c358e7191ba80
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'GB\\Block' => __DIR__ . '/../..' . '/includes/class-block.php',
+        'GB\\Blocks' => __DIR__ . '/../..' . '/includes/class-blocks.php',
         'GB\\Setup' => __DIR__ . '/../..' . '/includes/class-setup.php',
-        'Spawn\\Block' => __DIR__ . '/../..' . '/includes/class-block.php',
-        'Spawn\\Blocks' => __DIR__ . '/../..' . '/includes/class-blocks.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

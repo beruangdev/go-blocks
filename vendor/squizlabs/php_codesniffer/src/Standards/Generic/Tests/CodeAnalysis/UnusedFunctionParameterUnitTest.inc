@@ -59,96 +59,26 @@ function foo( $parameter ) {
     return <<<HTML
 <?xml version="1.0"?>
 <value>$parameter</value>
-HTML;
-}
-
-print foo( 'PARAMETER' );
-print "\n";
-
-function foo($bar)
-{
-    print "${bar} things\n";
-}
-
-function bar($x)
-{
-    return 2 * ${x};
-}
-
-$foo = function ($a, $b) {
-    return $a * 2;
-};
-
-function foobar() {
-    return;
-}
-
-
-/*
- * The function signature of methods in extended classes and implemented
- * interfaces has to mirror the parent class/interface.
- * The overloaded method may not use all params.
- */
-
-class MyClass {
-    public function something($a, $b) {
-        return $a * 2;
-    }
-}
-
-class MyExtendedClass extends SomeClass {
-    public function something($a, $b) {
-        return $a * 2;
-    }
-}
-
-class MyExtendedClass implements SomeInterface {
-    public function something($a, $b) {
-        return $a * 2;
-    }
-}
-
-
-/*
- * Functions may not use all params passed to them.
- * Report different violations for params *before* and *after* the last param used.
- */
-
-function something($a) {
-    return 'foobar';
-}
-
-function myCallback($a, $b, $c, $d) {
-    return $a * $c;
-}
-
-fn ($a, $b, $c) => $b;
-
-// phpcs:set Generic.CodeAnalysis.UnusedFunctionParameter ignoreTypeHints[] Exception
-
-function oneParam(Exception $foo) {
-    return 'foobar';
-}
-
-function moreParamFirst(Exception $foo, LogicException $bar) {
-    return 'foobar' . $bar;
-}
-
-function moreParamSecond(LogicException $bar, Exception $foo) {
-    return 'foobar' . $bar;
-}
-// phpcs:set Generic.CodeAnalysis.UnusedFunctionParameter ignoreTypeHints[]
-
-class ConstructorPropertyPromotionNoContentInMethod {
-    public function __construct(protected int $id) {}
-}
-
-class ConstructorPropertyPromotionWithContentInMethod {
-    public function __construct(protected int $id, $toggle = true) {
-        if ($toggle === true) {
-            doSomething();
-        }
-    }
-}
-
-$found = in_array_cb($needle, $haystack, fn($array, $needle) => $array[2] === $needle);
+HTML; } print foo( 'PARAMETER' ); print "\n"; function foo($bar) { print "${bar}
+things\n"; } function bar($x) { return 2 * ${x}; } $foo = function ($a, $b) {
+return $a * 2; }; function foobar() { return; } /* * The function signature of
+methods in extended classes and implemented * interfaces has to mirror the
+parent class/interface. * The overloaded method may not use all params. */ class
+MyClass { public function something($a, $b) { return $a * 2; } } class
+MyExtendedClass extends SomeClass { public function something($a, $b) { return
+$a * 2; } } class MyExtendedClass implements SomeInterface { public function
+something($a, $b) { return $a * 2; } } /* * Functions may not use all params
+passed to them. * Report different violations for params *before* and *after*
+the last param used. */ function something($a) { return 'foobar'; } function
+myCallback($a, $b, $c, $d) { return $a * $c; } fn ($a, $b, $c) => $b; //
+phpcs:set Generic.CodeAnalysis.UnusedFunctionParameter ignoreTypeHints[]
+Exception function oneParam(Exception $foo) { return 'foobar'; } function
+moreParamFirst(Exception $foo, LogicException $bar) { return 'foobar' . $bar; }
+function moreParamSecond(LogicException $bar, Exception $foo) { return 'foobar'
+. $bar; } // phpcs:set Generic.CodeAnalysis.UnusedFunctionParameter
+ignoreTypeHints[] class ConstructorPropertyPromotionNoContentInMethod { public
+function __construct(protected int $id) {} } class
+ConstructorPropertyPromotionWithContentInMethod { public function
+__construct(protected int $id, $toggle = true) { if ($toggle === true) {
+doSomething(); } } } $found = in_array_cb($needle, $haystack, fn($array,
+$needle) => $array[2] === $needle);
