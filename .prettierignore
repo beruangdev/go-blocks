@@ -1,4 +1,5 @@
 dist/*
 build/*
+vendor/*
 pnpm-lock.yaml
 .git/*

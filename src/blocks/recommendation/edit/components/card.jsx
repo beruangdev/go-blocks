@@ -22,6 +22,7 @@ export function Card(props) {
     deleteList,
     editList,
   } = props
+
   let {
     title,
     subtitle,
