@@ -22,9 +22,17 @@
 * @package    ADDITIONAL PACKAGE TAG
 * @subpkg     not_camelcased
 * @author     Antônio Carlos Venâncio Júnior <foreign@character.net>
-* @author * @copyright 1997~1994 The PHP Group * @copyright 1994-1997 The PHP
-Group * @copyright The PHP Group * @license http://www.php.net/license/3_0.txt *
-@summary An unknown summary tag * */ ?>
+* @author
+* @copyright  1997~1994 The PHP Group
+* @copyright  1994-1997 The PHP Group
+* @copyright  The PHP Group
+* @license    http://www.php.net/license/3_0.txt
+* @summary    An unknown summary tag
+*
+*/
+
+
+?>
 <?php
 /**
 * This bit here is not qualified as file comment

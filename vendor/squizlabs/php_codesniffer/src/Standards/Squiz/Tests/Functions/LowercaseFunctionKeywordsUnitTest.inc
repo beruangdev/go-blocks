@@ -25,5 +25,4 @@ abstract class Bar {
 	Final STATIC PUBLIC Function FinalStaticPublicFunction() {}
 }
 
-$a = FN($x) =>
-$x;
+$a = FN($x) => $x;

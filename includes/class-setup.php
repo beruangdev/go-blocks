@@ -1,8 +1,12 @@
 <?php
 namespace GB;
 
+use GB\Activation;
+use GB\Uninstall;
+
 final class Setup {
 	private static $instance;
+	public static $file_path;
 
 	public static function instance() {
 		if ( ! isset( self::$instance ) && ! ( self::$instance instanceof Setup ) ) {
@@ -10,6 +14,9 @@ final class Setup {
 			self::$instance->enqueue_goblock();
 			self::$instance->enqueue_goblock_sample();
 			self::$instance->enqueue_goblock_asset();
+
+            Activation::init();
+            Uninstall::init();
 		}
 		return self::$instance;
 	}
@@ -52,9 +59,12 @@ final class Setup {
 	}
 
 	public function enqueue_goblock() {
-		$folders = $this->get_folders(GB_PLUGIN_DIR . 'src/blocks');
+        $folders = $this->get_folders(GB_PLUGIN_DIR . 'src/blocks');
         foreach ( $folders as $key => $folder ) {
-            require GB_PLUGIN_DIR . "build/blocks/$folder/block.php";
+            $path_block = GB_PLUGIN_DIR . "build/blocks/$folder/block.php";
+            if ( file_exists($path_block) ) {
+                require $path_block;
+            }
         }
 	}
 
@@ -62,7 +72,7 @@ final class Setup {
 		$folders = $this->get_folders(GB_PLUGIN_DIR . 'src/sample-blocks');
         foreach ( $folders as $key => $folder ) {
             $path = GB_PLUGIN_DIR . "build/sample-blocks/$folder/index.php";
-            if ( is_dir($path) ) {
+            if ( file_exists($path) ) {
                 require $path;
             }
         }

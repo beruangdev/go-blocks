@@ -12,5 +12,10 @@ $code = '$actions = array();'."\n";
 $code = "$actions = array();"."\n";
 
 // No errors for these because they are needed in some cases.
-$code = ' ?'.'>'; $code = '<'.'?php '; $string = 'This is a really long string.
-' . 'It is being used for errors. ' . 'The message is not translated.'; ?>
+$code = ' ?'.'>';
+$code = '<'.'?php ';
+
+$string = 'This is a really long string. '
+        . 'It is being used for errors. '
+        . 'The message is not translated.';
+?>

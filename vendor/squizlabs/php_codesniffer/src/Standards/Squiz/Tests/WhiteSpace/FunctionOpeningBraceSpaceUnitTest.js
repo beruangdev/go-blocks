@@ -1,96 +1,115 @@
-function FuncOne() {
-  // Code here.
-} //end AdjustModalDialogWidgetType
+function FuncOne()
+{
+    // Code here.
+
+}//end AdjustModalDialogWidgetType
+
 
 Testing.prototype = {
-  doSomething: function () {
+
+    doSomething: function()
+    {
+
+        // Code here.
+
+    },
+
+    doSomethingElse: function()
+    {
+        // Code here.
+
+    },
+
+    start: function()
+    {
+        this.toolbarPlugin.addButton('Image', 'imageEditor', 'Insert/Edit Image', function () { self.editImage() });
+
+    },
+};
+
+function FuncFour()
+{
+
+
     // Code here.
-  },
-
-  doSomethingElse: function () {
-    // Code here.
-  },
-
-  start: function () {
-    this.toolbarPlugin.addButton(
-      'Image',
-      'imageEditor',
-      'Insert/Edit Image',
-      function () {
-        self.editImage()
-      },
-    )
-  },
-}
-
-function FuncFour() {
-  // Code here.
 }
 
 AbstractAttributeEditorWidgetType.prototype = {
-  isActive: function () {
-    return this.active
-  },
+    isActive: function() {
 
-  activate: function (data) {
-    var x = {
-      test: function () {
-        alert('This is ok')
-      },
+        return this.active;
+
+    },
+
+    activate: function(data)
+    {
+        var x = {
+            test: function () {
+                alert('This is ok');
+            }
+        };
+
+        this.active = true;
+
     }
 
-    this.active = true
-  },
-}
+};
 
 function test() {
-  var x = 1
-  var y = function () {
-    alert(1)
-  }
+    var x = 1;
+    var y = function()
+    {
+        alert(1);
+    }
 
-  return x
+    return x;
+
 }
 
-var myFunc = function () {
-  var x = 1
+var myFunc = function()
+{
+    var x = 1;
 
-  blah(
-    x,
-    y,
-    function () {
-      alert(2)
-    },
-    z,
-  )
+    blah(x, y, function()
+    {
+        alert(2);
+    }, z);
 
-  blah(function () {
-    alert(2)
-  })
+    blah(function() { alert(2); });
 
-  return x
+    return x;
+
 }
 
 HelpWidgetType.prototype = {
-  init: function () {
-    var x = 1
+    init: function() {
+    var x = 1;
     var y = {
-      test: function () {
-        alert(3)
-      },
+        test: function() {
+
+
+            alert(3);
+        }
     }
-    return x
-  },
+    return x;
+
+    }
 }
 
 CustomFormEditWidgetType.prototype = {
-  addQuestion: function () {
-    var settings = {
-      default: '',
-    }
-  },
 
-  addQuestionRulesEvent: function () {
-    var self = this
-  },
-}
+    addQuestion: function()
+    {
+        var settings = {
+            default: ''
+        };
+
+    },
+
+    addQuestionRulesEvent: function()
+    {
+        var self = this;
+
+    }
+
+};

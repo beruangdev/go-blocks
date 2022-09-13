@@ -1,10 +1,17 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 2,
-  "name": "gb/recommendation",
+  "title": "Recommendation List (Go Blocks)",
+  "name": "gb/recommendation-list",
   "version": "0.0.1",
-  "title": "Recommendation (Go Blocks)",
-  "category": "text",
+  "keywords": [
+    "gb",
+    "Go Blocks",
+    "go-blocks",
+    "Tutorial",
+    "Recommendation List"
+  ],
+  "category": "widgets",
   "attributes": {
     "blockID": {
       "type": "string",
@@ -23,7 +30,6 @@
     "html": false,
     "multiple": false
   },
-  "textdomain": "recommendation",
   "editorScript": "file:./block.js",
   "viewScript": "file:./scripts/index.js"
 }

@@ -108,5 +108,4 @@ $a = function ($var1, $var2=false) use (
     $muchLongerVar3
 ) {};
 
-fn ($a,$b = null) =>
-$a($b);
+fn ($a,$b = null) => $a($b);

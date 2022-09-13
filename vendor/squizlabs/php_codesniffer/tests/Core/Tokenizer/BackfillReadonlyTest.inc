@@ -71,13 +71,30 @@ class ClassName {
         // Do something.
 
         /* testReadonlyUsedAsPropertyName */
-        $this->readonly = 'foo'; /* testReadonlyPropertyInTernaryOperator */
-$isReadonly = $this->readonly ? true : false; } } /*
-testReadonlyUsedAsFunctionName */ function readonly() { } /*
-testReadonlyUsedAsNamespaceName */ namespace Readonly; /*
-testReadonlyUsedAsPartOfNamespaceName */ namespace My\Readonly\Collection; /*
-testReadonlyAsFunctionCall */ $var = readonly($a, $b); /*
-testClassConstantFetchWithReadonlyAsConstantName */ echo ClassName::READONLY; /*
-testReadonlyUsedAsFunctionCallWithSpaceBetweenKeywordAndParens */ $var =
-readonly /* comment */ (); /* testParseErrorLiveCoding */ // This must be the
-last test in the file. readonly
+        $this->readonly = 'foo';
+
+        /* testReadonlyPropertyInTernaryOperator */
+        $isReadonly = $this->readonly ? true : false;
+    }
+}
+
+/* testReadonlyUsedAsFunctionName */
+function readonly()
+{
+}
+
+/* testReadonlyUsedAsNamespaceName */
+namespace Readonly;
+/* testReadonlyUsedAsPartOfNamespaceName */
+namespace My\Readonly\Collection;
+/* testReadonlyAsFunctionCall */
+$var = readonly($a, $b);
+/* testClassConstantFetchWithReadonlyAsConstantName */
+echo ClassName::READONLY;
+
+/* testReadonlyUsedAsFunctionCallWithSpaceBetweenKeywordAndParens */
+$var = readonly /* comment */ ();
+
+/* testParseErrorLiveCoding */
+// This must be the last test in the file.
+readonly

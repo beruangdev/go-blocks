@@ -7,5 +7,11 @@ $var = array();
 function test()
     {
         $arr = array(
-            'a' =>
-'a', <<<<<<< HEAD 'b' => 'b' ======= 'c' => 'c' >>>>>>> master ); }
+            'a' => 'a',
+<<<<<<< HEAD
+            'b' => 'b'
+=======
+            'c' => 'c'
+>>>>>>> master
+        );
+    }

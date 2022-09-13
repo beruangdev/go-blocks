@@ -10,4 +10,6 @@ for ($i = 0, $c = sizeof($a); $i < $c; ++$i) {
 }
 
 $it = new ArrayIterator($a);
-for ($it->rewind(); $it->valid(); $it->next()) { echo $it->current(); }
+for ($it->rewind(); $it->valid(); $it->next()) {
+    echo $it->current();
+}

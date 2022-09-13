@@ -212,18 +212,90 @@ switch ($foo) {
 
 function foo()
 {
-    return $bar->{$action . 'JsonAction'}(); } switch (true) { case 1: return
-foo( function () { $foo = $bar; // when this is removed it works ok return
-false; // from here on it reports unreachable } ); } for($i=0,$j=50; $i<100;
-$i++) { while($j--) { if($j==17) { goto end; echo 'unreachable'; } } } switch
-($var) { case '1': goto end; echo 'hi'; case '2': case '3': if ($something ===
-true) { goto end; echo 'hi'; } break; default: goto end; if ($something ===
-true) { goto end; echo 'hi'; } } end: echo 'j hit 17'; // Issue 2512. class
-TestAlternativeControlStructures { public function
-alternative_switch_in_function( $var ) { switch ( $var ) : case 'value1':
-do_something(); break; default: case 'value2': do_something_else(); break;
-endswitch; } public function various_alternative_control_structures() { $_while
-= 1; for ( $a = 0; $a++ < 1; ) : foreach ( [ 1 ] as $b ) : while ( $_while-- ) :
-if ( 1 ) : switch ( 1 ) : default: echo 'yay, we made it!'; break; endswitch;
-endif; endwhile; endforeach; endfor; } } $var_after_class_in_global_space = 1;
-do_something_else(); // Intentional syntax error. return array_map(
+    return $bar->{$action . 'JsonAction'}();
+}
+
+switch (true) {
+    case 1:
+        return foo(
+            function () {
+                $foo = $bar;  // when this is removed it works ok
+                return false; // from here on it reports unreachable
+            }
+        );
+}
+
+for($i=0,$j=50; $i<100; $i++) {
+  while($j--) {
+    if($j==17) {
+		goto end;
+		echo 'unreachable';
+	}
+  }
+}
+
+switch ($var) {
+    case '1':
+        goto end;
+        echo 'hi';
+
+    case '2':
+    case '3':
+        if ($something === true) {
+            goto end;
+            echo 'hi';
+        }
+    break;
+    default:
+        goto end;
+
+        if ($something === true) {
+            goto end;
+            echo 'hi';
+        }
+}
+
+end:
+echo 'j hit 17';
+
+// Issue 2512.
+class TestAlternativeControlStructures {
+
+    public function alternative_switch_in_function( $var ) {
+
+        switch ( $var ) :
+            case 'value1':
+                do_something();
+                break;
+
+            default:
+            case 'value2':
+                do_something_else();
+                break;
+        endswitch;
+    }
+
+    public function various_alternative_control_structures() {
+        $_while = 1;
+
+        for ( $a = 0; $a++ < 1; ) :
+            foreach ( [ 1 ] as $b ) :
+                while ( $_while-- ) :
+                    if ( 1 ) :
+                        switch ( 1 ) :
+                            default:
+                                echo 'yay, we made it!';
+                                break;
+                        endswitch;
+                    endif;
+                endwhile;
+            endforeach;
+        endfor;
+    }
+}
+
+$var_after_class_in_global_space = 1;
+do_something_else();
+
+// Intentional syntax error.
+return array_map(

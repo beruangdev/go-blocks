@@ -91,15 +91,30 @@ $closureWithReturnType = function ($string = NONSENSE & FAKE)/* testTypeIntersec
 /* testTypeIntersectionArrowParam */
 $arrowWithParamType = fn (Foo&Bar $param, /* testBitwiseAndArrowParamDefault */ ?int $int = CONSTA & CONSTB )
     /* testBitwiseAndArrowExpression */
-    =>
-$param & $int; /* testTypeIntersectionArrowReturnType */ $arrowWithReturnType =
-fn ($param) : Foo&Bar => $param * 10; /* testBitwiseAndInArrayKey */ $array =
-array( A & B => /* testBitwiseAndInArrayValue */ B & C ); /*
-testBitwiseAndInShortArrayKey */ $array = [ A & B => /*
-testBitwiseAndInShortArrayValue */ B & C ]; /*
-testBitwiseAndNonArrowFnFunctionCall */ $obj->fn($something & $else); /*
-testBitwiseAnd6 */ function &fn(/*
-testTypeIntersectionNonArrowFunctionDeclaration */ Foo&Bar $something) {} /*
-testTypeIntersectionWithInvalidTypes */ function (int&string $var) {}; /*
-testLiveCoding */ // Intentional parse error. This has to be the last test in
-the file. return function( Foo&
+    => $param & $int;
+
+/* testTypeIntersectionArrowReturnType */
+$arrowWithReturnType = fn ($param) : Foo&Bar => $param * 10;
+
+/* testBitwiseAndInArrayKey */
+$array = array(
+    A & B => /* testBitwiseAndInArrayValue */ B & C
+);
+
+/* testBitwiseAndInShortArrayKey */
+$array = [
+    A & B => /* testBitwiseAndInShortArrayValue */ B & C
+];
+
+/* testBitwiseAndNonArrowFnFunctionCall */
+$obj->fn($something & $else);
+
+/* testBitwiseAnd6 */
+function &fn(/* testTypeIntersectionNonArrowFunctionDeclaration */ Foo&Bar $something) {}
+
+/* testTypeIntersectionWithInvalidTypes */
+function (int&string $var) {};
+
+/* testLiveCoding */
+// Intentional parse error. This has to be the last test in the file.
+return function( Foo&

@@ -142,43 +142,111 @@
  * @category  PHP
  * @package   PHP_CodeSniffer
  * @author    Greg Sherwood <gsherwood@squiz.net>
-* @author Marc McIntyre
-<mmcintyre@squiz.net>
-  * @copyright 2006-2012 Squiz Pty Ltd (ABN 77 084 670 600) * @license
-  https://github.com/squizlabs/PHP_CodeSniffer/blob/master/licence.txt BSD
-  Licence * @link http://pear.php.net/package/PHP_CodeSniffer */ /** * Comment *
-  * @one * @two * @one * * @two something * here * @two foo * @three something *
-  here * @three bar */ /** * @ var Comment */ /** @var Database $mockedDatabase
-  */ /** @var Container $mockedContainer */ /** * 这是一条测试评论. */ /** * I'm
-  a function short-description * @return boolean */ /** * this is a test *
-  @author test * @param boolean $foo blah * @return boolean * @param boolean
-  $bar Blah. */ /** * Short description. * * @tag one * @param int $number *
-  @param string $text * @return something */ /** * * @param int $number * @param
-  string $text * @return something */ /** * @param int $number */ /** * étude
-  des ... */ /**doc comment */ /** * Document behaviour with missing blank lines
-  with indented docblocks. * @param * @param * @tag one * */ /** Indented doc
-  comment */ /** * Verify and document sniff behaviour when the "tag value" is
-  indented with a mix of tabs and spaces. * The below is "correctly" aligned. *
-  * @category PHP * @package PHP_CodeSniffer * @author Greg Sherwood
-  <gsherwood@squiz.net>
-    * @author Marc McIntyre
-    <mmcintyre@squiz.net>
-      * @copyright 2006-2012 Squiz Pty Ltd (ABN 77 084 670 600) * @license
-      https://github.com/squizlabs/PHP_CodeSniffer/blob/master/licence.txt BSD
-      Licence * @link http://pear.php.net/package/PHP_CodeSniffer */ /** *
-      Verify and document sniff behaviour when the "tag value" is indented with
-      a mix of tabs and spaces. * The below is incorrectly aligned. * *
-      @category PHP * @package PHP_CodeSniffer * @author Greg Sherwood
-      <gsherwood@squiz.net>
-        * @author Marc McIntyre
-        <mmcintyre@squiz.net>
-          * @copyright 2006-2012 Squiz Pty Ltd (ABN 77 084 670 600) * @license
-          https://github.com/squizlabs/PHP_CodeSniffer/blob/master/licence.txt
-          BSD Licence * @link http://pear.php.net/package/PHP_CodeSniffer */ /**
-          No docblock close tag. Must be last test without new
-          line.</mmcintyre@squiz.net
-        ></gsherwood@squiz.net
-      ></mmcintyre@squiz.net
-    ></gsherwood@squiz.net
-  ></mmcintyre@squiz.net
->
+ * @author    Marc McIntyre <mmcintyre@squiz.net>
+ * @copyright 2006-2012 Squiz Pty Ltd (ABN 77 084 670 600)
+ * @license   https://github.com/squizlabs/PHP_CodeSniffer/blob/master/licence.txt BSD Licence
+ * @link      http://pear.php.net/package/PHP_CodeSniffer
+ */
+
+/**
+ * Comment
+ *
+ * @one
+ * @two
+ * @one
+ *
+ * @two   something
+ *        here
+ * @two   foo
+ * @three something
+ *        here
+ * @three bar
+ */
+
+/**
+ * @ var Comment
+ */
+
+/** @var Database $mockedDatabase */
+/** @var Container $mockedContainer */
+
+/**
+ * 这是一条测试评论.
+ */
+
+/**
+ * I'm a function short-description
+ * @return boolean
+ */
+
+/**
+ * this is a test
+ * @author test
+ * @param boolean $foo blah
+ * @return boolean
+ * @param boolean $bar Blah.
+ */
+
+/**
+ * Short description.
+ *
+ * @tag    one
+ * @param  int    $number
+ * @param  string $text
+ * @return something
+ */
+
+/**
+ *
+ * @param  int    $number
+ * @param  string $text
+ * @return something
+ */
+
+/**
+ * @param int $number
+ */
+
+/**
+ * étude des ...
+ */
+
+/**doc comment */
+
+        /**
+         * Document behaviour with missing blank lines with indented docblocks.
+         * @param
+         * @param
+         * @tag one
+         *
+         */
+
+        /** Indented doc comment */
+
+/**
+ * Verify and document sniff behaviour when the "tag value" is indented with a mix of tabs and spaces.
+ * The below is "correctly" aligned.
+ *
+ * @category  PHP
+ * @package	  PHP_CodeSniffer
+ * @author	  Greg Sherwood <gsherwood@squiz.net>
+ * @author	  Marc McIntyre <mmcintyre@squiz.net>
+ * @copyright 2006-2012 Squiz Pty Ltd (ABN 77 084 670 600)
+ * @license	  https://github.com/squizlabs/PHP_CodeSniffer/blob/master/licence.txt BSD Licence
+ * @link	  http://pear.php.net/package/PHP_CodeSniffer
+ */
+
+/**
+ * Verify and document sniff behaviour when the "tag value" is indented with a mix of tabs and spaces.
+ * The below is incorrectly aligned.
+ *
+ * @category		PHP
+ * @package		  PHP_CodeSniffer
+ * @author	  Greg Sherwood <gsherwood@squiz.net>
+ * @author	Marc McIntyre <mmcintyre@squiz.net>
+ * @copyright 2006-2012 Squiz Pty Ltd (ABN 77 084 670 600)
+ * @license	  	https://github.com/squizlabs/PHP_CodeSniffer/blob/master/licence.txt BSD Licence
+ * @link		http://pear.php.net/package/PHP_CodeSniffer
+ */
+
+/** No docblock close tag. Must be last test without new line.

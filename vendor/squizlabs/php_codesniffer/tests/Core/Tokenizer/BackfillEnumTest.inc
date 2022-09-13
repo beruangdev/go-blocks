@@ -51,14 +51,45 @@ class Enum {
         // Do something.
 
         /* testEnumUsedAsPropertyName */
-        $this->enum = 'foo'; } } /* testEnumUsedAsFunctionName */ function
-enum() { } /* testDeclarationContainingComment */ enum /* comment */ Name { case
-SOME_CASE; } enum /* testEnumUsedAsEnumName */ Enum { } /*
-testEnumUsedAsNamespaceName */ namespace Enum; /*
-testEnumUsedAsPartOfNamespaceName */ namespace My\Enum\Collection; /*
-testEnumUsedInObjectInitialization */ $obj = new Enum; /* testEnumAsFunctionCall
-*/ $var = enum($a, $b); /* testEnumAsFunctionCallWithNamespace */ var =
-namespace\enum(); /* testClassConstantFetchWithEnumAsClassName */ echo
-Enum::CONSTANT; /* testClassConstantFetchWithEnumAsConstantName */ echo
-ClassName::ENUM; /* testParseErrorMissingName */ enum { case SOME_CASE; } /*
-testParseErrorLiveCoding */ // This must be the last test in the file. enum
+        $this->enum = 'foo';
+    }
+}
+
+/* testEnumUsedAsFunctionName */
+function enum()
+{
+}
+
+/* testDeclarationContainingComment */
+enum /* comment */ Name
+{
+    case SOME_CASE;
+}
+
+enum /* testEnumUsedAsEnumName */ Enum
+{
+}
+
+/* testEnumUsedAsNamespaceName */
+namespace Enum;
+/* testEnumUsedAsPartOfNamespaceName */
+namespace My\Enum\Collection;
+/* testEnumUsedInObjectInitialization */
+$obj = new Enum;
+/* testEnumAsFunctionCall */
+$var = enum($a, $b);
+/* testEnumAsFunctionCallWithNamespace */
+var = namespace\enum();
+/* testClassConstantFetchWithEnumAsClassName */
+echo Enum::CONSTANT;
+/* testClassConstantFetchWithEnumAsConstantName */
+echo ClassName::ENUM;
+
+/* testParseErrorMissingName */
+enum {
+    case SOME_CASE;
+}
+
+/* testParseErrorLiveCoding */
+// This must be the last test in the file.
+enum

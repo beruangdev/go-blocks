@@ -30,7 +30,23 @@ function bar2()
 {
 }//end bar2()
 
-$foo->bar( $arg1, function ($arg2) use ($var1) { // body }, $arg3 ); $instance =
-new class extends \Foo implements \HandleableInterface { // Class content };
-$app->get('/hello/{name}', function ($name) use ($app) { return 'Hello ' .
-$app->escape($name); }); enum Foo4 { }//end
+$foo->bar(
+    $arg1,
+    function ($arg2) use ($var1) {
+        // body
+    },
+    $arg3
+);
+
+$instance = new class extends \Foo implements \HandleableInterface {
+    // Class content
+};
+
+$app->get('/hello/{name}', function ($name) use ($app) {
+    return 'Hello ' . $app->escape($name);
+});
+
+enum Foo4
+{
+
+}//end

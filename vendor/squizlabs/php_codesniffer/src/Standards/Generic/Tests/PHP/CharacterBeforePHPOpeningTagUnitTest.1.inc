@@ -3,6 +3,7 @@ Foo
 // Some code
 ?>
 
-<?php
+
+ <?php
 // Some code
 ?>

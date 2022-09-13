@@ -1,5 +1,5 @@
-phpcs:set Generic.WhiteSpace.ScopeIndent tabIndent false phpcs:set
-Generic.WhiteSpace.ScopeIndent exact true
+phpcs:set Generic.WhiteSpace.ScopeIndent tabIndent false
+phpcs:set Generic.WhiteSpace.ScopeIndent exact true
 <?php
 function test()
 {
@@ -18,6 +18,11 @@ function test()
 
 if ($foo) {
     [
-      'enabled'     =>
-$enabled, 'compression' => $compression, ] = $options; } $this->foo() ->bar()
-->baz();
+      'enabled'     => $enabled,
+      'compression' => $compression,
+    ] = $options;
+}
+
+$this->foo()
+    ->bar()
+    ->baz();

@@ -12,4 +12,6 @@ trait baz {
 }
 
 $trait = 'foo';
-echo $this->trait; echo Something::$trait; echo $trait;
+echo $this->trait;
+echo Something::$trait;
+echo $trait;

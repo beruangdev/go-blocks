@@ -15,6 +15,24 @@
   "phpsab.standard": "WordPress",
   "[php]": {
     "breadcrumbs.showConstructors": true,
-    "editor.defaultFormatter": "valeryanm.vscode-phpsab"
+    // "editor.defaultFormatter": "valeryanm.vscode-phpsab"
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+  },
+
+  "eslint.format.enable": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   }
 }

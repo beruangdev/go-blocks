@@ -1,15 +1,16 @@
-import { ButtonDeleteImage } from './index'
 import { useState, useEffect } from 'react'
-const { __ } = wp.i18n // Import __() from wp.i18n
-const { RichText, MediaUpload } = wp.blockEditor || wp.editor
+import { ButtonDeleteImage } from './index'
 
 import { ReactComponent as IconShopee } from '../../icons/IconShopee.svg'
 import { ReactComponent as IconLazada } from '../../icons/IconLazada.svg'
 import { ReactComponent as IconTokopedia } from '../../icons/IconTokopedia.svg'
 import { ReactComponent as IconBukalapak } from '../../icons/IconBukalapak.svg'
 
+const { __ } = wp.i18n // Import __() from wp.i18n
+const { RichText, MediaUpload } = wp.blockEditor || wp.editor
+
 export function Card(props) {
-  let {
+  const {
     data,
     setAttributes,
     block,
@@ -23,7 +24,7 @@ export function Card(props) {
     editList,
   } = props
 
-  let {
+  const {
     title,
     subtitle,
     description,
@@ -35,7 +36,7 @@ export function Card(props) {
     pricetag,
   } = data
 
-  let olshops_lists = [
+  const olshops_lists = [
     {
       name: 'Tokopedia',
       slug: 'tokopedia',
@@ -59,15 +60,14 @@ export function Card(props) {
   ]
 
   function ChoiceIcon({ name }) {
-    return olshops_lists.filter((olshops_list) => {
-      return olshops_list.name == name
-    })[0].logo
+    return olshops_lists.filter((olshops_list) => olshops_list.name == name)[0]
+      .logo
   }
 
   function addOlshopForm(e) {
     e.preventDefault()
-    let form = e.target
-    let olshops_list = olshops_lists.filter(
+    const form = e.target
+    const olshops_list = olshops_lists.filter(
       (ol) => ol.slug == form.olshop.value,
     )[0]
     editList({
@@ -85,7 +85,7 @@ export function Card(props) {
   }
 
   function editOlshopForm(index, url, olshop) {
-    let newOlshops = [...olshops]
+    const newOlshops = [...olshops]
     newOlshops[index].url = url.target.value
     console.log('newOlshops', newOlshops)
     editList({ olshops: newOlshops })
@@ -179,7 +179,7 @@ export function Card(props) {
               style={{
                 boxShadow: 'rgb(0 0 0 / 54%) -3px -125px 35px -14px inset',
               }}
-            ></div>
+            />
           </figure>
         ) : (
           <div className='h-full cursor-pointer'>
@@ -194,20 +194,18 @@ export function Card(props) {
               allowedTypes={['image']}
               value={index}
               render={({ open }) => (
-                <>
-                  <div
-                    className='flex h-full w-full flex-wrap items-center justify-center bg-[#EEEEEE]'
-                    onClick={open}
-                  >
-                    <div className='flex flex-col flex-wrap items-center justify-center text-[#999999]'>
-                      <i
-                        className='fa fa-picture-o text-8xl'
-                        aria-hidden='true'
-                      ></i>
-                      <p className='m-0 text-[#999999]'>Tambahkan Media</p>
-                    </div>
+                <div
+                  className='flex h-full w-full flex-wrap items-center justify-center bg-[#EEEEEE]'
+                  onClick={open}
+                >
+                  <div className='flex flex-col flex-wrap items-center justify-center text-[#999999]'>
+                    <i
+                      className='fa fa-picture-o text-8xl'
+                      aria-hidden='true'
+                    />
+                    <p className='m-0 text-[#999999]'>Tambahkan Media</p>
                   </div>
-                </>
+                </div>
               )}
             />
           </div>
@@ -222,7 +220,7 @@ export function Card(props) {
             {index + 1}. &nbsp;
           </h4>
           <RichText
-            tagName={'h4'}
+            tagName='h4'
             keepPlaceholderOnFocus
             placeholder={__('Title')}
             className={`m-0 font-semibold ${
@@ -234,7 +232,7 @@ export function Card(props) {
           />
 
           <RichText
-            tagName={'p'}
+            tagName='p'
             keepPlaceholderOnFocus
             placeholder={__('Subtitle')}
             className={`m-0 w-full ${
@@ -253,7 +251,7 @@ export function Card(props) {
           type='text'
           placeholder='Price Tag'
           className=''
-          value={pricetag ?? `Rp`}
+          value={pricetag ?? 'Rp'}
           onChange={(e) => editList({ pricetag: e.target.value })}
         />
         <input
@@ -350,7 +348,7 @@ export function Card(props) {
       {/* Olshop Description */}
       <div className='recomendasi-list-description p-5 pt-0'>
         <RichText
-          tagName={'p'}
+          tagName='p'
           keepPlaceholderOnFocus
           placeholder={__('Description goes here')}
           className='my-0 w-full font-normal'

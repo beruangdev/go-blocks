@@ -1,5 +1,5 @@
 <html>
-  <?php
+<?php
 echo $html;
 ?>
 </html>

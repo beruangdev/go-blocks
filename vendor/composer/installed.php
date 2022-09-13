@@ -3,7 +3,7 @@
         'name' => 'bilhakki/go-blocks',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '9af4e4aa78d57e5c9d065d26b660e2339723d4f9',
+        'reference' => 'b8c60bb388bb66f4c2ec8c64d61d45101f1f57fc',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'automattic/vipwpcs' => array(
             'pretty_version' => 'dev-develop',
             'version' => 'dev-develop',
-            'reference' => 'f1c80858a680f0b42d97cb6cbbfad7b5c433f08c',
+            'reference' => 'eeb28f0e704208cafd3d6e489b90edda1e208e7c',
             'type' => 'phpcodesniffer-standard',
             'install_path' => __DIR__ . '/../automattic/vipwpcs',
             'aliases' => array(
@@ -24,7 +24,7 @@
         'bilhakki/go-blocks' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '9af4e4aa78d57e5c9d065d26b660e2339723d4f9',
+            'reference' => 'b8c60bb388bb66f4c2ec8c64d61d45101f1f57fc',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -68,10 +68,21 @@
             ),
             'dev_requirement' => true,
         ),
+        'phpcsstandards/phpcsutils' => array(
+            'pretty_version' => 'dev-develop',
+            'version' => 'dev-develop',
+            'reference' => '8d100f07534809aa7031629e9da1bab4f32be393',
+            'type' => 'phpcodesniffer-standard',
+            'install_path' => __DIR__ . '/../phpcsstandards/phpcsutils',
+            'aliases' => array(
+                0 => '1.x-dev',
+            ),
+            'dev_requirement' => true,
+        ),
         'sirbrillig/phpcs-variable-analysis' => array(
             'pretty_version' => '2.x-dev',
             'version' => '2.9999999.9999999.9999999-dev',
-            'reference' => 'ad2b0b57803a48bb3495777bee2a9a13c8e9da53',
+            'reference' => 'aaf902277f2889fddbdb37046ae02b9965e2cf0f',
             'type' => 'phpcodesniffer-standard',
             'install_path' => __DIR__ . '/../sirbrillig/phpcs-variable-analysis',
             'aliases' => array(),
@@ -80,7 +91,7 @@
         'squizlabs/php_codesniffer' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '53e0f59fff0657e03c2dfab631db30f18abf41f3',
+            'reference' => 'b860f758b87bf43b7e5a7e0ebe1804f2f9771f1b',
             'type' => 'library',
             'install_path' => __DIR__ . '/../squizlabs/php_codesniffer',
             'aliases' => array(

@@ -20,6 +20,9 @@
     <rule ref="WordPress.Security.EscapeOutput">
         <severity>0</severity>
     </rule>
+    <rule ref="WordPress.DB.PreparedSQL">
+        <severity>0</severity>
+    </rule>
     <rule ref="Squiz.Strings.DoubleQuoteUsage.NotRequired">
         <severity>0</severity>
     </rule>

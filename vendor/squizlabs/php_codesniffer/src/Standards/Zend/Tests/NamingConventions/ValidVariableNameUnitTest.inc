@@ -63,20 +63,69 @@ echo MyClass::$varname;
 echo MyClass::$_varName;
 echo MyClass::$varName2;
 
-echo $this->varName; echo $this->var_name; echo $this->varname; echo
-$this->_varName; echo $this->varName2; echo $object->varName; echo
-$object->var_name; echo $object->varName2; echo $object_name->varname; echo
-$object_name->_varName; echo $object_name->varName2; echo
-$this->myFunction($one, $two); echo $object->myFunction($one_two, $var2); $error
-= "format is \$GLOBALS['$varName']"; $error = "format is
-\$GLOBALS['$varName2']"; echo $_SESSION['var_name']; echo $_FILES['var_name'];
-echo $_ENV['var_name']; echo $_COOKIE['var_name']; echo $_COOKIE['var_name2'];
-$XML = 'hello'; $myXML = 'hello'; $XMLParser = 'hello'; $xmlParser = 'hello';
-$xmlParser2 = 'hello'; echo "{$_SERVER['HOSTNAME']} $var_name";
-$someObject->{$name}; $someObject->my_function($var_name);
-var_dump($http_response_header); var_dump($HTTP_RAW_POST_DATA);
-var_dump($php_errormsg); interface Base { protected $anonymous; public function
-__construct(); } $anonClass = new class() { public function foo($foo, $_foo,
-$foo_bar) { $bar = 1; $_bar = 2; $bar_foo = 3; } }; echo $obj?->varName; echo
-$obj?->var_name; echo $obj?->varName; enum SomeEnum { public function foo($foo,
-$_foo, $foo_bar) { $bar = 1; $_bar = 2; $bar_foo = 3; } }
+echo $this->varName;
+echo $this->var_name;
+echo $this->varname;
+echo $this->_varName;
+echo $this->varName2;
+echo $object->varName;
+echo $object->var_name;
+echo $object->varName2;
+echo $object_name->varname;
+echo $object_name->_varName;
+echo $object_name->varName2;
+
+echo $this->myFunction($one, $two);
+echo $object->myFunction($one_two, $var2);
+
+$error = "format is \$GLOBALS['$varName']";
+$error = "format is \$GLOBALS['$varName2']";
+
+echo $_SESSION['var_name'];
+echo $_FILES['var_name'];
+echo $_ENV['var_name'];
+echo $_COOKIE['var_name'];
+echo $_COOKIE['var_name2'];
+
+$XML        = 'hello';
+$myXML      = 'hello';
+$XMLParser  = 'hello';
+$xmlParser  = 'hello';
+$xmlParser2 = 'hello';
+
+echo "{$_SERVER['HOSTNAME']} $var_name";
+
+$someObject->{$name};
+$someObject->my_function($var_name);
+
+var_dump($http_response_header);
+var_dump($HTTP_RAW_POST_DATA);
+var_dump($php_errormsg);
+
+interface Base
+{
+    protected $anonymous;
+
+    public function __construct();
+}
+
+$anonClass = new class() {
+    public function foo($foo, $_foo, $foo_bar) {
+        $bar = 1;
+        $_bar = 2;
+        $bar_foo = 3;
+    }
+};
+
+echo $obj?->varName;
+echo $obj?->var_name;
+echo $obj?->varName;
+
+enum SomeEnum
+{
+    public function foo($foo, $_foo, $foo_bar) {
+        $bar = 1;
+        $_bar = 2;
+        $bar_foo = 3;
+    }
+}

@@ -16,15 +16,45 @@ function getVar($varname='var', $var='var')
         }
     }
 
-    while ($row = $query->fetch(PDO::FETCH_NUM)) { $result[$row[0]] = array();
-$result[$row[0]][] = $current; self::$_inTransaction = TRUE;
-parent::$_inTransaction = TRUE; static::$_inTransaction = TRUE; $$varName =
-$varValue; } }//end getVar() class myClass { private static $_dbh = NULL; public
-$dbh = NULL; protected $dbh = NULL; var $dbh = NULL; // Old PHP4 compatible
-code. } A::$a = 'b'; \A::$a = 'c'; \A\B\C::$d = 'd'; B\C::$d = 'e'; @$a = 1; $a
-= []; foreach ($a as $b) $c = 'd'; $var = $var2; list ($a, $b) = explode(',',
-$c); $var1 ? $var2 = 0 : $var2 = 1; $obj->$classVar = $prefix.'-'.$type;
-$closureWithDefaultParamter = function(array $testArray=array()) {}; ?>
+    while ($row = $query->fetch(PDO::FETCH_NUM)) {
+        $result[$row[0]] = array();
+        $result[$row[0]][] = $current;
+
+        self::$_inTransaction = TRUE;
+        parent::$_inTransaction = TRUE;
+        static::$_inTransaction = TRUE;
+        $$varName = $varValue;
+    }
+
+}//end getVar()
+
+class myClass
+{
+    private static $_dbh = NULL;
+    public $dbh = NULL;
+    protected $dbh = NULL;
+    var $dbh = NULL; // Old PHP4 compatible code.
+}
+
+A::$a = 'b';
+\A::$a = 'c';
+\A\B\C::$d = 'd';
+B\C::$d = 'e';
+
+@$a = 1;
+
+$a = [];
+foreach ($a as $b)
+    $c = 'd';
+
+$var = $var2;
+list ($a, $b) = explode(',', $c);
+$var1 ? $var2 = 0 : $var2 = 1;
+
+$obj->$classVar = $prefix.'-'.$type;
+
+$closureWithDefaultParamter = function(array $testArray=array()) {};
+?>
 <?php $var = false; ?>
 
 <?php
@@ -53,8 +83,28 @@ switch ($b < 10 && $a = 10) {
 
 $array = [
     match ($b < 10 && $a = 10) {
-        true =>
-10, false => 0 }, ]; $arrow_function = fn ($a = null) => $a; function ($html) {
-$regEx = '/regexp/'; return preg_replace_callback($regEx, function ($matches) {
-[$all] = $matches; return $all; }, $html); }; function () { $a = false;
-some_label: $b = getB(); };
+        true => 10,
+        false => 0
+    },
+];
+
+$arrow_function = fn ($a = null) => $a;
+
+function ($html) {
+    $regEx = '/regexp/';
+
+    return preg_replace_callback($regEx, function ($matches) {
+        [$all] = $matches;
+        return $all;
+    }, $html);
+};
+
+
+function () {
+    $a = false;
+
+    some_label:
+
+    $b = getB();
+};
+

@@ -10,5 +10,15 @@ if ($something) {
 
 $var = myFunction();
 print_r($var);
-echo $object->define(); echo $object -> define(); Foo::define(); $c = new class
-extends Something{ public function someMethod() { // ... } };
+echo $object->define();
+echo $object -> define();
+Foo::define();
+
+$c = new class extends Something{
+
+    public function someMethod()
+    {
+        // ...
+    }
+
+};

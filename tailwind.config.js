@@ -1,4 +1,7 @@
+const typography = require('@tailwindcss/typography')
+
 module.exports = {
+  important: true,
   purge: {
     enabled: true,
     content: [
@@ -12,5 +15,7 @@ module.exports = {
     extend: {},
   },
   variants: {},
-  plugins: [],
+  plugins: [
+    typography,
+  ],
 }

@@ -16,5 +16,4 @@ function foo() : namespace\Baz {}
 $closure = function () : namespace\Baz {}
 
 /* testArrowFunctionReturnType */
-$fn = fn() : namespace\Baz =>
-new namespace\Baz;
+$fn = fn() : namespace\Baz => new namespace\Baz;

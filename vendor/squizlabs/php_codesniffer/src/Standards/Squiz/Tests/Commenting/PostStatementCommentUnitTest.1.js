@@ -1,26 +1,36 @@
-function test(id, buttons) {
-  // cool function
-  alert('hello')
-  alert('hello again') // And again.
-  // Valid comment.
-} //end test()
+function test(id, buttons) // cool function
+{
+    alert('hello');
+    alert('hello again'); // And again.
+    // Valid comment.
 
-var good = true // Indeed.
+}//end test()
+
+var good = true; // Indeed.
 
 mig.Gallery.prototype = {
-  init: function (cb) {}, //end init()
 
-  imageClicked: function (id) {}, //end imageClicked()
-}
+    init: function(cb)
+    {
 
-dfx.getIframeDocument = function (iframe) {
-  return doc
-} //end dfx.getIframeDocument()
+    },//end init()
+
+    imageClicked: function(id)
+    {
+
+    }//end imageClicked()
+
+};
+
+dfx.getIframeDocument = function(iframe)
+{
+
+    return doc;
+
+};//end dfx.getIframeDocument()
 
 // Verify that multi-line control structure with comments and annotations are left alone.
-if (
-  condition && // comment
-  anotherCondition
-) {
-  condition = true
+if (condition // comment
+    && anotherCondition) {
+    condition = true;
 }

@@ -20,6 +20,14 @@ class TestClass extends MyClass implements MyInterface, YourInterface
     const CONST2 = 'hello';
 }
 
-$foo->define('bar'); $foo->getBar()->define('foo'); Foo::define('bar'); class
-ClassConstBowOutTest { const /* comment */ abc = 1; const // phpcs:ignore
-Standard.Category.Sniff some_constant = 2; } $foo->getBar()?->define('foo');
+$foo->define('bar');
+$foo->getBar()->define('foo');
+Foo::define('bar');
+
+class ClassConstBowOutTest {
+    const /* comment */ abc = 1;
+    const // phpcs:ignore Standard.Category.Sniff
+        some_constant = 2;
+}
+
+$foo->getBar()?->define('foo');

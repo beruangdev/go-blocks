@@ -1,20 +1,25 @@
 var x = {
-  a: function () {
-    alert('thats right')
-    x = x ? a : x
-  },
-}
+    a: function () {
+        alert('thats right')  ;
+        x = (x?a:x) ;
+    },
+} ;
 
-id = id.replace(/row\/:;/gi, '')
+id = id.replace(/row\/:;/gi, '');
 
-for (i = 0; i < 3; i++) {
-  for (j = 0; j < 5; j++) {
-    if (j == x) break
-  }
+for (i=0   ; i<3 ; i++) {
+   for (j=0; j<5 ; j++) {
+      if (j==x)
+         break ;
+   }
 }
-alert('hi')
-var sum = a /* + b */
+alert('hi');
+;
+
+var sum = a /* + b */;
 
 var sum = a // +b
+;
+
 var sum = a /* +b
-    + c */
+    + c */ ;

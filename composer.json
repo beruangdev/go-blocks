@@ -27,7 +27,8 @@
     "squizlabs/php_codesniffer": "^3.6",
     "wp-coding-standards/wpcs": "^2.3",
     "phpcompatibility/phpcompatibility-wp": "dev-master",
-    "automattic/vipwpcs": "dev-develop"
+    "automattic/vipwpcs": "dev-develop",
+    "phpcsstandards/phpcsutils": "1.x-dev"
   },
   "scripts": {
     "lint": "./vendor/bin/phpcs --standard=phpcs.xml"

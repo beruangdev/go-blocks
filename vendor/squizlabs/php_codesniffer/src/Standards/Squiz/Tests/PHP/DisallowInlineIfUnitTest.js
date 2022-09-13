@@ -1,2 +1,2 @@
-x = x ? a : x
-id = id.replace(/row\/:/gi, '')
+x = (x?a:x);
+id = id.replace(/row\/:/gi, '');

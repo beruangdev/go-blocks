@@ -253,52 +253,226 @@ abstract class MyClass {
 }
 
 /**
- * Creates a map of tokens =>
-line numbers for each token. * * @param array $tokens The array of tokens to
-process. * @param object $tokenizer The tokenizer being used to process this
-file. * @param string $eolChar The EOL character to use for splitting strings. *
-* @return void */ function foo(&$tokens, $tokenizer, $eolChar) { }//end foo()
-/** * Gettext. * */ function _() { return $foo; } class Baz { /** * The PHP5
-constructor * * No return tag */ public function __construct() { } } /** *
-Complete a step. * * @param string $status Status of step to complete. * @param
-array $array Array. * @param string $note Optional note. * * @return void */
-function completeStep($status, array $array = [Class1::class, 'test'], $note =
-'') { echo 'foo'; } /** * Variadic function. * * @param string $name1 Comment. *
-@param string ...$name2 Comment. * * @return void */ function myFunction(string
-$name1, string ...$name2) { } /** * Variadic function. * * @param string $name1
-Comment. * @param string $name2 Comment. * * @return void */ function
-myFunction(string $name1, string ...$name2) { } /** * Completely invalid format,
-but should not cause PHP notices. * * @param $bar * Comment here. * @param ... *
-Additional arguments here. * * @return * Return value * */ function foo($bar) {
-} /** * Processes the test. * * @param PHP_CodeSniffer\Files\File $phpcsFile The
-PHP_CodeSniffer file where the * token occurred. * @param int $stackPtr The
-position in the tokens stack * where the listening token type * was found. * *
-@return void * @see register() */ function process(File $phpcsFile, $stackPtr) {
-}//end process() /** * Processes the test. * * @param int $phpcsFile The
-PHP_CodeSniffer * file where the * token occurred. * @param int $stackPtr The
-position in the tokens stack * where the listening token type * was found. * *
-@return void * @see register() */ function process(File $phpcsFile, $stackPtr) {
-}//end process() /** * @param (Foo&Bar)|null $a Comment. * @param string $b
-Comment. * * @return void */ public function setTranslator($a, &$b): void {
-$this->translator = $translator; } // phpcs:set PEAR.Commenting.FunctionComment
-minimumVisibility protected private function setTranslator2($a, &$b): void {
-$this->translator = $translator; } // phpcs:set PEAR.Commenting.FunctionComment
-minimumVisibility public protected function setTranslator3($a, &$b): void {
-$this->translator = $translator; } private function setTranslator4($a, &$b):
-void { $this->translator = $translator; } class Bar { /** * The PHP5 constructor
-* * @return */ public function __construct() { } } // phpcs:set
-PEAR.Commenting.FunctionComment specialMethods[] class Bar { /** * The PHP5
-constructor */ public function __construct() { } } // phpcs:set
-PEAR.Commenting.FunctionComment specialMethods[] ignored /** * Should be ok */
-public function ignored() { } // phpcs:set PEAR.Commenting.FunctionComment
-specialMethods[] __construct,__destruct class Something implements
-JsonSerializable { /** * Single attribute. * * @return mixed */
-#[ReturnTypeWillChange] public function jsonSerialize() {} /** * Multiple
-attributes. * * @return Something */ #[AttributeA] #[AttributeB] public function
-methodName() {} /** * Blank line between docblock and attribute. * * @return
-mixed */ #[ReturnTypeWillChange] public function blankLineDetectionA() {} /** *
-Blank line between attribute and function declaration. * * @return mixed */
-#[ReturnTypeWillChange] public function blankLineDetectionB() {} /** * Blank
-line between both docblock and attribute and attribute and function declaration.
-* * @return mixed */ #[ReturnTypeWillChange] public function
-blankLineDetectionC() {} }
+ * Creates a map of tokens => line numbers for each token.
+ *
+ * @param array  $tokens    The array of tokens to process.
+ * @param object $tokenizer The tokenizer being used to process this file.
+ * @param string $eolChar   The EOL character to use for splitting strings.
+ *
+ * @return void
+ */
+function foo(&$tokens, $tokenizer, $eolChar)
+{
+
+}//end foo()
+
+/**
+ * Gettext.
+ *
+ */
+function _() {
+    return $foo;
+}
+
+class Baz {
+    /**
+     * The PHP5 constructor
+     *
+     * No return tag
+     */
+    public function __construct() {
+
+    }
+}
+
+/**
+ * Complete a step.
+ *
+ * @param string $status Status of step to complete.
+ * @param array  $array  Array.
+ * @param string $note   Optional note.
+ *
+ * @return void
+ */
+function completeStep($status, array $array = [Class1::class, 'test'], $note = '') {
+    echo 'foo';
+}
+
+/**
+ * Variadic function.
+ *
+ * @param string $name1    Comment.
+ * @param string ...$name2 Comment.
+ *
+ * @return void
+ */
+function myFunction(string $name1, string ...$name2) {
+}
+
+
+/**
+ * Variadic function.
+ *
+ * @param string $name1 Comment.
+ * @param string $name2 Comment.
+ *
+ * @return void
+ */
+function myFunction(string $name1, string ...$name2) {
+}
+
+/**
+ * Completely invalid format, but should not cause PHP notices.
+ *
+ * @param $bar
+ *   Comment here.
+ * @param ...
+ *   Additional arguments here.
+ *
+ * @return
+ *   Return value
+ *
+ */
+function foo($bar) {
+}
+
+/**
+ * Processes the test.
+ *
+ * @param PHP_CodeSniffer\Files\File $phpcsFile The PHP_CodeSniffer file where the
+ *                                        token occurred.
+ * @param int                        $stackPtr The position in the tokens stack
+ *                                    where the listening token type
+ *                                           was found.
+ *
+ * @return void
+ * @see    register()
+ */
+function process(File $phpcsFile, $stackPtr)
+{
+
+}//end process()
+
+/**
+ * Processes the test.
+ *
+ * @param int $phpcsFile The PHP_CodeSniffer
+ *                   file where the
+ *                                        token occurred.
+ * @param int $stackPtr  The position in the tokens stack
+ *                                    where the listening token type
+ *                                           was found.
+ *
+ * @return void
+ * @see    register()
+ */
+function process(File $phpcsFile, $stackPtr)
+{
+
+}//end process()
+
+/**
+ * @param (Foo&Bar)|null $a Comment.
+ * @param string         $b Comment.
+ *
+ * @return void
+ */
+public function setTranslator($a, &$b): void
+{
+    $this->translator = $translator;
+}
+
+// phpcs:set PEAR.Commenting.FunctionComment minimumVisibility protected
+private function setTranslator2($a, &$b): void
+{
+    $this->translator = $translator;
+}
+
+// phpcs:set PEAR.Commenting.FunctionComment minimumVisibility public
+protected function setTranslator3($a, &$b): void
+{
+    $this->translator = $translator;
+}
+
+private function setTranslator4($a, &$b): void
+{
+    $this->translator = $translator;
+}
+
+class Bar {
+    /**
+     * The PHP5 constructor
+     *
+     * @return
+     */
+    public function __construct() {
+
+    }
+}
+
+// phpcs:set PEAR.Commenting.FunctionComment specialMethods[]
+class Bar {
+    /**
+     * The PHP5 constructor
+     */
+    public function __construct() {
+
+    }
+}
+
+// phpcs:set PEAR.Commenting.FunctionComment specialMethods[] ignored
+/**
+ * Should be ok
+ */
+public function ignored() {
+
+}
+
+// phpcs:set PEAR.Commenting.FunctionComment specialMethods[] __construct,__destruct
+
+class Something implements JsonSerializable {
+    /**
+     * Single attribute.
+     *
+     * @return mixed
+     */
+    #[ReturnTypeWillChange]
+    public function jsonSerialize() {}
+
+    /**
+     * Multiple attributes.
+     *
+     * @return Something
+     */
+    #[AttributeA]
+    #[AttributeB]
+    public function methodName() {}
+
+    /**
+     * Blank line between docblock and attribute.
+     *
+     * @return mixed
+     */
+
+    #[ReturnTypeWillChange]
+    public function blankLineDetectionA() {}
+
+    /**
+     * Blank line between attribute and function declaration.
+     *
+     * @return mixed
+     */
+    #[ReturnTypeWillChange]
+
+    public function blankLineDetectionB() {}
+
+    /**
+     * Blank line between both docblock and attribute and attribute and function declaration.
+     *
+     * @return mixed
+     */
+
+    #[ReturnTypeWillChange]
+
+    public function blankLineDetectionC() {}
+}
